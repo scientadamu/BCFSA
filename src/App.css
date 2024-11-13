@@ -1,0 +1,465 @@
+/* Reset basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* =======================
+  Header Styles (Desktop)
+=========================== */
+/* Header with Navigation */
+header {
+  background-color: #222;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  background: #0056b3;;
+}
+
+.logo {
+  font-size: 28px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-left: 20px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping on small screens */
+  justify-content: center; /* Center navigation items */
+}
+
+nav ul li {
+  margin: 0 10px;
+}
+
+nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
+
+/* =======================
+  Hamburger Menu (Mobile/Tablet)
+=========================== */
+.hamburger-menu {
+  display: none; /* Initially hidden on desktop */
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger-menu span {
+  width: 30px;
+  height: 3px;
+  background-color: white;
+  border-radius: 5px;
+}
+
+/* =======================
+  Mobile / Tablet Styles
+=========================== */
+@media (max-width: 768px) {
+  header {
+      padding: 15px;
+  }
+
+  header .logo img {
+      width: 120px;
+  }
+
+  header nav {
+      display: none; /* Hide the menu by default */
+      width: 100%;
+      position: absolute;
+      top: 60px;
+      left: 0;
+      background-color: #007BFF;
+      padding: 10px 0;
+      text-align: center;
+  }
+
+  header nav ul {
+      flex-direction: column;
+      gap: 20px;
+  }
+
+  header nav ul li {
+      display: block;
+  }
+
+  .hamburger-menu {
+      display: flex; /* Show the hamburger on small screens */
+  }
+
+  header nav.active {
+      display: block; /* Show the menu when active */
+  }
+}
+
+/* =======================
+  Desktop Styles (Wider than 768px)
+=========================== */
+@media (min-width: 769px) {
+  header nav {
+      display: flex; /* Horizontal navigation for larger screens */
+  }
+}
+
+
+
+/* =======================
+  Hero Section Styles
+=========================== */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 70vh;
+  overflow: hidden;
+  background: #000;
+}
+
+.hero-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  z-index: 1;
+}
+
+/* Style for the button */
+.hero .btn {
+  padding: 10px 20px;
+  background-color: #fff;
+  color: #333;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Background sliding effect */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('images/bago@bCFSA.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: slideBackground 25s infinite linear;
+}
+
+@keyframes slideBackground {
+  0% { background-image: url('images/bago@bCFSA.jpg'); }
+  20% { background-image: url('images/image2.jpg'); }
+  40% { background-image: url('images/image3.jpg'); }
+  60% { background-image: url('images/image4.jpg'); }
+  80% { background-image: url('images/image5.jpg'); }
+  100% { background-image: url('images/image1.jpg'); }
+}
+
+/* =======================
+  About Us Section Styles
+=========================== */
+.about {
+  padding: 40px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.about h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  font-size: 18px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* =======================
+  Skills Section Styles
+=========================== */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.skill-item {
+  width: 450px;
+  text-align: center;
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-img {
+  width: 100%;
+  height: 80%;
+  margin: 0 auto;
+  border-radius: 15%;
+  overflow: hidden;
+}
+
+.skill-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+h3 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+/* Style for Read More Button */
+.btn {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 10px;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+/* =======================
+  Sections Section Styles
+=========================== */
+.sections {
+  padding: 60px 20px;
+  background-color: #fff;
+  text-align: center;
+}
+
+.sections h2 {
+  font-size: 36px;
+  margin-bottom: 40px;
+}
+
+.section-list {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.section-item {
+  background-color: #f8f9fa;
+  padding: 30px;
+  border-radius: 10px;
+  width: 250px;
+  text-align: center;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-item h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.section-item p {
+  font-size: 16px;
+}
+
+/* =======================
+  Committees Section Styles
+=========================== */
+.committee-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.committee-item {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.committee-item h3 {
+  font-size: 1.75rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.committee-item p {
+  font-size: 1rem;
+  color: #555;
+}
+
+/* =======================
+  Sponsors Section Styles
+=========================== */
+.sponsors {
+  padding: 2rem;
+  background-color: #f9f9f9;
+  text-align: center;
+}
+
+.sponsor-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.sponsor-card.large-sponsor {
+  width: 80%;
+  max-width: 550px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.sponsor-card.large-sponsor img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.sponsor-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.sponsor-card.sponsor2, .sponsor-card.sponsor3 {
+  width: 35%;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.sponsor-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* =======================
+  Responsive Design
+=========================== */
+@media (max-width: 768px) {
+  .sponsor-row {
+      flex-direction: column;
+      gap: 10px;
+  }
+
+  .sponsor-card.sponsor2, .sponsor-card.sponsor3 {
+      width: 90%;
+  }
+}
+
+/* =======================
+  Media Section Styles
+=========================== */
+.media {
+  text-align: center;
+  padding: 40px 20px;
+  background-color: #f4f4f4;
+}
+
+.media h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.media p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+.media-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  justify-content: center;
+}
+
+.media-item {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.media-item img,
+.media-item video {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.media-item p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+/* =======================
+  Footer Styles
+=========================== */
+footer {
+  background-color: #343a40;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-size: 14px;
+}
