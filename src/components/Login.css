@@ -263,56 +263,117 @@
 
 
 /* Mobile Styles */
-
 @media (max-width: 768px) {
     .login-overlay {
-        padding: 10px;
-    }
-    .login-modal {
-        width: 100%;
-        max-width: 400px;
-        max-height: calc(100vh - 20px);
-    }
-    .login-form {
-        padding: 20px;
-    }
-    .demo-credentials {
-        padding: 15px 20px;
-    }
-    .demo-grid {
-        grid-template-columns: 1fr;
-        gap: 8px;
-    }
-    .login-header {
         padding: 15px;
     }
+
+    .login-modal {
+        width: 100%;
+        max-width: 420px;
+        max-height: calc(100vh - 30px);
+    }
+
+    .login-form {
+        padding: 24px;
+    }
+
+    .form-group input {
+        padding: 14px 16px;
+        font-size: 16px;
+        min-height: 48px;
+    }
+
+    .login-btn {
+        padding: 16px 24px;
+        font-size: 1.1rem;
+        min-height: 50px;
+        width: 100%;
+    }
+
+    .demo-credentials {
+        padding: 18px 24px;
+    }
+
+    .demo-grid {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .demo-fill-btn {
+        padding: 10px 16px;
+        font-size: 0.9rem;
+        min-height: 44px;
+    }
+
+    .login-header {
+        padding: 18px 24px;
+    }
+
     .login-header h2 {
-        font-size: 1.3rem;
+        font-size: 1.4rem;
+    }
+
+    .close-btn {
+        padding: 8px;
+        min-height: 40px;
+        min-width: 40px;
+        font-size: 1.2rem;
     }
 }
 
 
 /* Extra small screens */
-
 @media (max-width: 480px) {
     .login-overlay {
-        padding: 5px;
+        padding: 8px;
     }
+
     .login-modal {
         max-width: 100%;
-        border-radius: 10px;
+        border-radius: 12px;
+        max-height: calc(100vh - 16px);
     }
+
     .login-form {
-        padding: 15px;
+        padding: 20px;
     }
+
+    .form-group input {
+        padding: 12px 14px;
+        font-size: 16px;
+        min-height: 46px;
+    }
+
+    .login-btn {
+        padding: 14px 20px;
+        font-size: 1rem;
+        min-height: 48px;
+    }
+
     .demo-credentials {
-        padding: 10px 15px;
+        padding: 15px 20px;
     }
+
+    .demo-fill-btn {
+        padding: 8px 12px;
+        font-size: 0.85rem;
+        min-height: 42px;
+    }
+
     .login-header {
-        padding: 12px 15px;
+        padding: 15px 20px;
     }
+
     .login-header h2 {
-        font-size: 1.2rem;
+        font-size: 1.25rem;
+    }
+
+    .close-btn {
+        padding: 6px;
+        min-height: 36px;
+        min-width: 36px;
+        font-size: 1.1rem;
     }
 }
 

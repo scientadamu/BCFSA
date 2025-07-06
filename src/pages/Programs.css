@@ -272,38 +272,143 @@
   transform: translateY(-3px);
 }
 
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .programs-page {
+    padding: 70px 0;
+  }
+
+  .programs-grid {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+  }
+
+  .programs-hero {
+    padding: 2.5rem;
+  }
+}
+
 /* Mobile Styles */
 @media (max-width: 768px) {
   .programs-page {
-    padding: 60px 0;
+    padding: 50px 0;
+  }
+
+  .programs-page .container {
+    padding: 0 15px;
   }
 
   .programs-hero h1 {
     font-size: 2rem;
+    line-height: 1.2;
   }
 
   .programs-hero {
-    padding: 2rem;
+    padding: 2rem 1rem;
+  }
+
+  .programs-hero p {
+    font-size: 1.1rem;
+  }
+
+  .programs-filters {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .filter-btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    min-height: 44px;
+    width: 100%;
+    max-width: 200px;
   }
 
   .programs-grid {
     grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .program-card {
+    padding: 1.5rem;
   }
 
   .program-actions {
     flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .program-actions .btn {
+    width: 100%;
+    padding: 12px 20px;
+    min-height: 44px;
   }
 
   .programs-cta {
-    padding: 2rem;
+    padding: 2rem 1rem;
   }
 
   .programs-cta h2 {
     font-size: 2rem;
+    line-height: 1.2;
+  }
+
+  .programs-cta .btn-primary {
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    min-height: 50px;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  .programs-page {
+    padding: 40px 0;
+  }
+
+  .programs-page .container {
+    padding: 0 10px;
+  }
+
+  .programs-hero {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .programs-hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .programs-hero p {
+    font-size: 1rem;
   }
 
   .filter-btn {
     padding: 10px 20px;
-    font-size: 0.9rem;
+    font-size: 0.95rem;
+    max-width: 180px;
+  }
+
+  .program-card {
+    padding: 1.25rem;
+  }
+
+  .program-actions .btn {
+    padding: 10px 16px;
+    font-size: 0.95rem;
+    min-height: 42px;
+  }
+
+  .programs-cta {
+    padding: 1.5rem 0.75rem;
+  }
+
+  .programs-cta h2 {
+    font-size: 1.75rem;
+  }
+
+  .programs-cta .btn-primary {
+    padding: 14px 28px;
+    font-size: 1rem;
   }
 }

@@ -309,17 +309,19 @@
 /* Mobile Styles */
 @media (max-width: 768px) {
   .footer {
-    padding: 60px 0 0;
-    margin-top: 40px;
+    padding: 50px 0 0;
+    margin-top: 30px;
+    margin-left: 0 !important;
+  }
+
+  .footer .container {
+    padding: 0 15px;
   }
 
   .footer-content {
     grid-template-columns: 1fr;
-    gap: 40px;
-  }
-
-  .footer {
-    margin-left: 0 !important;
+    gap: 30px;
+    margin-bottom: 40px;
   }
 
   .footer-logo {
@@ -341,33 +343,126 @@
   .footer-section h4 {
     font-size: 1.1rem;
     text-align: center;
+    margin-bottom: 1rem;
   }
 
   .footer-section {
     text-align: center;
   }
 
+  .footer-section p {
+    font-size: 0.9rem;
+  }
+
   .footer-section ul li a {
     justify-content: center;
+    padding: 8px 0;
+    font-size: 0.9rem;
+  }
+
+  .social-links {
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .social-link {
+    width: 44px;
+    height: 44px;
+    font-size: 1.2rem;
+  }
+
+  .contact-info p {
+    justify-content: center;
+    font-size: 0.9rem;
+  }
+
+  .footer-bottom {
+    padding: 25px 0;
   }
 
   .footer-bottom-content {
     flex-direction: column;
     text-align: center;
-    gap: 20px;
+    gap: 15px;
   }
 
   .footer-links {
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  .footer-links a {
+    font-size: 0.85rem;
+  }
+
+  .footer-bottom p {
+    font-size: 0.85rem;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  .footer {
+    padding: 40px 0 0;
+    margin-top: 25px;
+  }
+
+  .footer .container {
+    padding: 0 10px;
+  }
+
+  .footer-content {
+    gap: 25px;
+    margin-bottom: 30px;
+  }
+
+  .footer-section h3 {
+    font-size: 1.3rem;
+  }
+
+  .footer-section h4 {
+    font-size: 1rem;
+  }
+
+  .footer-section p {
+    font-size: 0.85rem;
+  }
+
+  .footer-section ul li a {
+    font-size: 0.85rem;
+    padding: 6px 0;
   }
 
   .social-links {
-    justify-content: center;
+    gap: 10px;
   }
 
-  .contact-info p {
-    justify-content: center;
+  .social-link {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
+  .footer-bottom {
+    padding: 20px 0;
+  }
+
+  .footer-bottom-content {
+    gap: 12px;
+  }
+
+  .footer-links {
+    gap: 12px;
+  }
+
+  .footer-links a {
+    font-size: 0.8rem;
+  }
+
+  .footer-bottom p {
+    font-size: 0.8rem;
   }
 }
 

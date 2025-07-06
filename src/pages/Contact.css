@@ -252,18 +252,39 @@
   transform: translateY(-3px);
 }
 
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .contact-content {
+    gap: 2rem;
+  }
+
+  .contact-hero {
+    padding: 2.5rem;
+  }
+}
+
 /* Mobile Styles */
 @media (max-width: 768px) {
   .contact-page {
-    padding: 60px 0;
+    padding: 40px 0;
+  }
+
+  .contact-page .container {
+    padding: 0 15px;
   }
 
   .contact-hero h1 {
     font-size: 2rem;
+    line-height: 1.2;
   }
 
   .contact-hero {
-    padding: 2rem;
+    padding: 2rem 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .contact-hero p {
+    font-size: 1.1rem;
   }
 
   .contact-content {
@@ -271,22 +292,112 @@
     gap: 2rem;
   }
 
+  .contact-cards {
+    gap: 1rem;
+  }
+
+  .contact-card {
+    padding: 1.5rem;
+  }
+
+  .contact-icon {
+    font-size: 2rem;
+  }
+
   .form-row {
     grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 14px 16px;
+    font-size: 16px;
+    min-height: 48px;
+  }
+
+  .form-group textarea {
+    min-height: 120px;
+  }
+
+  .submit-btn {
+    padding: 16px 24px;
+    font-size: 1.1rem;
+    min-height: 50px;
+    width: 100%;
   }
 
   .contact-form-section,
   .map-section,
   .social-section {
-    padding: 2rem;
+    padding: 1.5rem;
   }
 
   .social-links {
     flex-direction: column;
     align-items: center;
+    gap: 0.75rem;
   }
 
   .social-link {
-    width: 200px;
+    width: 100%;
+    max-width: 250px;
+    padding: 14px 20px;
+    font-size: 1rem;
+    min-height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  .contact-page {
+    padding: 30px 0;
+  }
+
+  .contact-page .container {
+    padding: 0 10px;
+  }
+
+  .contact-hero {
+    padding: 1.5rem 0.75rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-hero h1 {
+    font-size: 1.75rem;
+  }
+
+  .contact-hero p {
+    font-size: 1rem;
+  }
+
+  .contact-card {
+    padding: 1.25rem;
+  }
+
+  .contact-form-section,
+  .map-section,
+  .social-section {
+    padding: 1.25rem;
+  }
+
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    padding: 12px 14px;
+  }
+
+  .submit-btn {
+    padding: 14px 20px;
+    font-size: 1rem;
+  }
+
+  .social-link {
+    max-width: 200px;
+    padding: 12px 16px;
   }
 }

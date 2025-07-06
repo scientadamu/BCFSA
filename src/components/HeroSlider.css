@@ -172,37 +172,138 @@
 /* Only apply if you're using <img src=...> instead of background-image */
 
 
+/* Tablet Styles */
+@media (max-width: 1024px) {
+  .hero-slider {
+    height: 65vh;
+  }
+
+  .slide-content {
+    padding: 0 30px;
+  }
+
+  .slide-content h1 {
+    font-size: 2.5rem;
+  }
+
+  .slide-content h2 {
+    font-size: 1.3rem;
+  }
+}
+
 /* Mobile Styles */
 @media (max-width: 768px) {
   .hero-slider {
     height: 60vh;
+    border-radius: 0 0 20px 20px;
+  }
+
+  .slide-content {
+    padding: 0 20px;
+    max-width: 100%;
   }
 
   .slide-content h1 {
     font-size: 2rem;
+    line-height: 1.2;
+    margin-bottom: 0.75rem;
   }
 
   .slide-content h2 {
     font-size: 1.2rem;
+    margin-bottom: 0.75rem;
   }
 
   .slide-content p {
     font-size: 1rem;
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
   }
 
   .slide-buttons {
     flex-direction: column;
     align-items: center;
+    gap: 12px;
   }
 
   .btn {
-    padding: 10px 25px;
-    font-size: 0.9rem;
+    padding: 14px 28px;
+    font-size: 1rem;
+    min-height: 48px;
+    width: 100%;
+    max-width: 250px;
   }
 
   .prev-btn,
   .next-btn {
     font-size: 1.5rem;
+    padding: 10px 14px;
+    min-height: 44px;
+    min-width: 44px;
+  }
+
+  .slider-controls {
+    padding: 0 15px;
+  }
+
+  .slider-dots {
+    bottom: 20px;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Small Mobile Styles */
+@media (max-width: 480px) {
+  .hero-slider {
+    height: 50vh;
+    border-radius: 0 0 15px 15px;
+  }
+
+  .slide-content {
+    padding: 0 15px;
+  }
+
+  .slide-content h1 {
+    font-size: 1.75rem;
+  }
+
+  .slide-content h2 {
+    font-size: 1.1rem;
+  }
+
+  .slide-content p {
+    font-size: 0.95rem;
+    margin-bottom: 1.25rem;
+  }
+
+  .btn {
+    padding: 12px 24px;
+    font-size: 0.95rem;
+    max-width: 200px;
+  }
+
+  .prev-btn,
+  .next-btn {
+    font-size: 1.3rem;
     padding: 8px 12px;
+    min-height: 40px;
+    min-width: 40px;
+  }
+
+  .slider-controls {
+    padding: 0 10px;
+  }
+
+  .slider-dots {
+    bottom: 15px;
+  }
+
+  .dot {
+    width: 8px;
+    height: 8px;
   }
 }
