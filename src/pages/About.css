@@ -181,6 +181,204 @@
   line-height: 1.6;
 }
 
+/* Leader Profile Styles */
+.leader-profile {
+  margin: 4rem 0;
+  padding: 3rem 0;
+  border-bottom: 1px solid #eee;
+}
+
+.profile-content {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.profile-content.reverse {
+  grid-template-columns: 1fr 300px;
+}
+
+.profile-content.reverse .profile-image {
+  order: 2;
+}
+
+.profile-content.reverse .profile-info {
+  order: 1;
+}
+
+.profile-image img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.profile-info h3 {
+  color: #2c5530;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.profile-info h4 {
+  color: #4a7c59;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  font-weight: 500;
+}
+
+.profile-info p {
+  color: #666;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.achievements h5 {
+  color: #2c5530;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.achievements ul {
+  list-style: none;
+  padding: 0;
+}
+
+.achievements li {
+  color: #666;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.achievements li:before {
+  content: "✓";
+  color: #4a7c59;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* Staff Section */
+.staff-section {
+  margin: 4rem 0;
+  padding: 3rem;
+  background: #f8f9fa;
+  border-radius: 15px;
+}
+
+.staff-section h3 {
+  text-align: center;
+  color: #2c5530;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.staff-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.staff-card {
+  text-align: center;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.staff-card:hover {
+  transform: translateY(-5px);
+}
+
+.staff-card img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+.staff-card h4 {
+  color: #2c5530;
+  margin-bottom: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.staff-card p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* NYSC Section */
+.nysc-section {
+  margin: 4rem 0;
+  padding: 3rem 0;
+}
+
+.nysc-section h3 {
+  text-align: center;
+  color: #2c5530;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+.nysc-content {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 3rem;
+  align-items: center;
+}
+
+.nysc-info p {
+  color: #666;
+  line-height: 1.8;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.nysc-contributions h5 {
+  color: #2c5530;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.nysc-contributions ul {
+  list-style: none;
+  padding: 0;
+}
+
+.nysc-contributions li {
+  color: #666;
+  margin-bottom: 0.5rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.nysc-contributions li:before {
+  content: "•";
+  color: #4a7c59;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.nysc-image img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
 .impact-section {
   background: #0056b3;
   color: white;
@@ -267,6 +465,42 @@
 
   .stat-card h3 {
     font-size: 2rem;
+  }
+
+  /* Responsive Leadership Styles */
+  .profile-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .profile-content.reverse {
+    grid-template-columns: 1fr;
+  }
+
+  .profile-content.reverse .profile-image,
+  .profile-content.reverse .profile-info {
+    order: unset;
+  }
+
+  .profile-image img {
+    height: 250px;
+  }
+
+  .profile-info h3 {
+    font-size: 1.5rem;
+  }
+
+  .staff-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nysc-content {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .nysc-image img {
+    height: 200px;
   }
 }
 

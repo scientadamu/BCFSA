@@ -1,5 +1,4 @@
-import React, { useState, useEffect } from 'react';
-import apiService from '../services/api';
+import React, { useState } from 'react';
 import './Registration.css';
 
 const Registration = () => {
@@ -26,40 +25,19 @@ const Registration = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
   const [errors, setErrors] = useState({});
-  const [programs, setPrograms] = useState([]);
   const [apiError, setApiError] = useState('');
 
-  // Fetch programs from backend on component mount
-  useEffect(() => {
-    const fetchPrograms = async () => {
-      try {
-        const response = await apiService.getPrograms({ active: true });
-        if (response.success) {
-          setPrograms(response.data);
-        }
-      } catch (error) {
-        console.error('Failed to fetch programs:', error);
-        setApiError('Failed to load programs. Please refresh the page.');
-        // Fallback to hardcoded programs if API fails
-        setPrograms([
-          { id: 1, title: 'Computer Training' },
-          { id: 2, title: 'Fashion Design' },
-          { id: 3, title: 'Catering Services' },
-          { id: 4, title: 'Shoe Cobbling' },
-          { id: 5, title: 'Jewelry Making' },
-          { id: 6, title: 'Local Weaving' },
-          { id: 7, title: 'Graphic Design' },
-          { id: 8, title: 'Digital Marketing' },
-          { id: 9, title: 'Knitting' },
-          { id: 10, title: 'Kuli-kuli Production' },
-          { id: 11, title: 'Web Development' },
-          { id: 12, title: 'Mobile App Development' }
-        ]);
-      }
-    };
-
-    fetchPrograms();
-  }, []);
+  // Frontend programs list - no backend dependency
+  const programs = [
+    { id: 1, title: 'Computer Training', duration: '3 months', description: 'Learn basic computer skills, Microsoft Office, and internet usage' },
+    { id: 2, title: 'Fashion Design', duration: '6 months', description: 'Learn fashion design, pattern making, and garment construction' },
+    { id: 3, title: 'Catering Services', duration: '4 months', description: 'Learn professional cooking, food safety, and catering business' },
+    { id: 4, title: 'Shoe Cobbling', duration: '3 months', description: 'Learn shoe making, repair, and leather work' },
+    { id: 5, title: 'Jewelry Making', duration: '2 months', description: 'Learn jewelry design, beading, and metalwork' },
+    { id: 6, title: 'Local Weaving', duration: '4 months', description: 'Learn traditional weaving techniques and textile production' },
+    { id: 7, title: 'Knitting', duration: '2 months', description: 'Learn knitting techniques and pattern creation' },
+    { id: 8, title: 'Kuli-kuli Production', duration: '1 month', description: 'Learn groundnut processing and kuli-kuli production' }
+  ];
 
   const validateForm = () => {
     const newErrors = {};

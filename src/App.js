@@ -9,8 +9,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Home from './pages/Home';
 import About from './pages/About';
-import AboutGovernor from './pages/AboutGovernor';
-import AboutChairman from './pages/AboutChairman';
+
 import Programs from './pages/Programs';
 import SkillsPrograms from './pages/SkillsPrograms';
 import OrphanageServices from './pages/OrphanageServices';
@@ -40,8 +39,7 @@ function App() {
             <Routes>
               <Route path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
-              <Route path="/about-governor" element={<AboutGovernor />} />
-              <Route path="/about-chairman" element={<AboutChairman />} />
+
               <Route path="/programs" element={<Programs />} />
               <Route path="/skills-programs" element={<SkillsPrograms />} />
               <Route path="/orphanage-services" element={<OrphanageServices />} />
