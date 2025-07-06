@@ -216,10 +216,75 @@ const WomenSupport = () => {
         </div>
       </section>
 
+      {/* Empowerment Approach */}
+      <section className="empowerment-approach">
+        <div className="container">
+          <div className="section-header">
+            <h2>Our Holistic Empowerment Approach</h2>
+            <p>We address the multifaceted challenges faced by divorced women and widows through comprehensive support systems.</p>
+          </div>
+
+          <div className="approach-timeline">
+            <div className="timeline-item">
+              <div className="timeline-icon">🤝</div>
+              <div className="timeline-content">
+                <h3>Initial Support & Assessment</h3>
+                <p>Immediate emotional support and comprehensive needs assessment to understand each woman's unique situation and challenges.</p>
+                <ul>
+                  <li>Crisis counseling and emotional support</li>
+                  <li>Needs assessment and goal setting</li>
+                  <li>Legal rights education</li>
+                  <li>Emergency assistance if needed</li>
+                </ul>
+              </div>
+            </div>
+            <div className="timeline-item">
+              <div className="timeline-icon">💪</div>
+              <div className="timeline-content">
+                <h3>Healing & Rebuilding</h3>
+                <p>Focused on emotional healing, building self-confidence, and developing new life skills for independence.</p>
+                <ul>
+                  <li>Individual and group therapy sessions</li>
+                  <li>Self-esteem and confidence building</li>
+                  <li>Peer support groups</li>
+                  <li>Life skills training</li>
+                </ul>
+              </div>
+            </div>
+            <div className="timeline-item">
+              <div className="timeline-icon">🎓</div>
+              <div className="timeline-content">
+                <h3>Skills Development</h3>
+                <p>Comprehensive vocational training and education to develop marketable skills for economic independence.</p>
+                <ul>
+                  <li>Vocational skills training</li>
+                  <li>Digital literacy programs</li>
+                  <li>Business and entrepreneurship training</li>
+                  <li>Financial literacy education</li>
+                </ul>
+              </div>
+            </div>
+            <div className="timeline-item">
+              <div className="timeline-icon">🚀</div>
+              <div className="timeline-content">
+                <h3>Economic Empowerment</h3>
+                <p>Supporting women to achieve financial independence through business development and employment opportunities.</p>
+                <ul>
+                  <li>Microfinance and loan programs</li>
+                  <li>Business mentorship and support</li>
+                  <li>Job placement assistance</li>
+                  <li>Ongoing business coaching</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Impact Statistics */}
       <section className="impact-stats">
         <div className="container">
-          <h2>Our Impact</h2>
+          <h2>Our Impact & Achievements</h2>
           <div className="stats-grid">
             <div className="stat-card">
               <div className="stat-number">650+</div>
@@ -236,6 +301,131 @@ const WomenSupport = () => {
             <div className="stat-card">
               <div className="stat-number">50+</div>
               <div className="stat-label">Businesses Started</div>
+            </div>
+            <div className="stat-card">
+              <div className="stat-number">₦25M+</div>
+              <div className="stat-label">Loans Disbursed</div>
+            </div>
+            <div className="stat-card">
+              <div className="stat-number">95%</div>
+              <div className="stat-label">Loan Repayment Rate</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Support Network */}
+      <section className="support-network">
+        <div className="container">
+          <div className="section-header">
+            <h2>Building Strong Support Networks</h2>
+            <p>We believe in the power of community and mutual support among women facing similar challenges.</p>
+          </div>
+
+          <div className="network-features">
+            <div className="network-card">
+              <div className="network-icon">👥</div>
+              <h3>Peer Support Groups</h3>
+              <p>Regular meetings where women share experiences, challenges, and victories in a safe, supportive environment.</p>
+              <div className="network-benefits">
+                <span>Weekly group sessions</span>
+                <span>Experienced facilitators</span>
+                <span>Confidential environment</span>
+              </div>
+            </div>
+            <div className="network-card">
+              <div className="network-icon">🤝</div>
+              <h3>Mentorship Program</h3>
+              <p>Pairing new participants with successful program graduates who provide guidance and encouragement.</p>
+              <div className="network-benefits">
+                <span>One-on-one mentoring</span>
+                <span>Success story sharing</span>
+                <span>Ongoing support</span>
+              </div>
+            </div>
+            <div className="network-card">
+              <div className="network-icon">💼</div>
+              <h3>Business Network</h3>
+              <p>Connecting women entrepreneurs for collaboration, resource sharing, and mutual business support.</p>
+              <div className="network-benefits">
+                <span>Business partnerships</span>
+                <span>Resource sharing</span>
+                <span>Market opportunities</span>
+              </div>
+            </div>
+            <div className="network-card">
+              <div className="network-icon">🎉</div>
+              <h3>Community Events</h3>
+              <p>Regular social events, workshops, and celebrations that strengthen bonds and build lasting friendships.</p>
+              <div className="network-benefits">
+                <span>Monthly gatherings</span>
+                <span>Skill-sharing workshops</span>
+                <span>Cultural celebrations</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Skills Training Programs */}
+      <section className="skills-training">
+        <div className="container">
+          <div className="section-header">
+            <h2>Comprehensive Skills Training</h2>
+            <p>Practical skills training programs designed to provide immediate income opportunities and long-term career growth.</p>
+          </div>
+
+          <div className="skills-categories">
+            <div className="skill-category">
+              <h3>🧵 Traditional Crafts</h3>
+              <div className="skills-list">
+                <div className="skill-item">
+                  <strong>Tailoring & Fashion Design</strong>
+                  <p>Complete training in garment making, pattern design, and fashion entrepreneurship</p>
+                </div>
+                <div className="skill-item">
+                  <strong>Textile & Weaving</strong>
+                  <p>Traditional and modern textile production techniques</p>
+                </div>
+                <div className="skill-item">
+                  <strong>Embroidery & Decoration</strong>
+                  <p>Artistic embroidery and fabric decoration skills</p>
+                </div>
+              </div>
+            </div>
+            <div className="skill-category">
+              <h3>🍳 Culinary Arts</h3>
+              <div className="skills-list">
+                <div className="skill-item">
+                  <strong>Catering & Event Planning</strong>
+                  <p>Professional catering services and event management</p>
+                </div>
+                <div className="skill-item">
+                  <strong>Baking & Pastry</strong>
+                  <p>Commercial baking and pastry production</p>
+                </div>
+                <div className="skill-item">
+                  <strong>Food Processing</strong>
+                  <p>Food preservation and packaging techniques</p>
+                </div>
+              </div>
+            </div>
+            <div className="skill-category">
+              <h3>💻 Digital Skills</h3>
+              <div className="skills-list">
+                <div className="skill-item">
+                  <strong>Computer Literacy</strong>
+                  <p>Basic computer skills and office applications</p>
+                </div>
+                <div className="skill-item">
+                  <strong>Digital Marketing</strong>
+                  <p>Online business promotion and social media marketing</p>
+                </div>
+                <div className="skill-item">
+                  <strong>E-commerce</strong>
+                  <p>Online selling and digital payment systems</p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -255,7 +445,7 @@ const WomenSupport = () => {
               <h3>Call Us</h3>
               <p>Speak with our support team to discuss your needs and available programs.</p>
               <div className="contact-info">
-                <strong>080-SUPPORT-1</strong>
+                <strong>+234-800-WOMEN-1</strong>
               </div>
             </div>
             <div className="join-card">
@@ -269,6 +459,14 @@ const WomenSupport = () => {
               <h3>Apply Online</h3>
               <p>Fill out our online application form to get started with our programs.</p>
               <Link to="/registration" className="btn btn-primary">Apply Now</Link>
+            </div>
+            <div className="join-card">
+              <i className="fas fa-comments"></i>
+              <h3>WhatsApp Support</h3>
+              <p>Get quick answers and support through our WhatsApp helpline.</p>
+              <div className="contact-info">
+                <strong>+234-900-HELP-NOW</strong>
+              </div>
             </div>
           </div>
         </div>

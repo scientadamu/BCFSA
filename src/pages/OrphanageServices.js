@@ -187,18 +187,63 @@ const OrphanageServices = () => {
         </div>
       </section>
 
+      {/* Project Information */}
+      <section className="project-info">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-md-6">
+              <h2>₦2.5 Billion Orphanage Project</h2>
+              <p className="lead">
+                Our ambitious orphanage project represents a significant investment in the future of Niger State's
+                most vulnerable children. This state-of-the-art facility will provide world-class care and education.
+              </p>
+              <div className="project-features">
+                <div className="feature-highlight">
+                  <h4>🏗️ Modern Infrastructure</h4>
+                  <p>Contemporary buildings designed with children's safety and comfort in mind</p>
+                </div>
+                <div className="feature-highlight">
+                  <h4>🎓 Educational Excellence</h4>
+                  <p>On-site schools from nursery to secondary level with qualified teachers</p>
+                </div>
+                <div className="feature-highlight">
+                  <h4>🏥 Healthcare Facilities</h4>
+                  <p>Fully equipped medical center with 24/7 healthcare professionals</p>
+                </div>
+                <div className="feature-highlight">
+                  <h4>🌟 Holistic Development</h4>
+                  <p>Sports, arts, and recreational facilities for complete child development</p>
+                </div>
+              </div>
+            </div>
+            <div className="col-md-6">
+              <div className="project-image">
+                <img src={require('../assets/images/general/ProposedOphanageHome.jpg')} alt="Proposed Orphanage" />
+                <div className="project-badge">
+                  <span>₦2.5B Investment</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Impact Statistics */}
       <section className="impact-stats">
         <div className="container">
-          <h2>Our Impact</h2>
+          <h2>Our Current Impact & Future Goals</h2>
           <div className="stats-grid">
             <div className="stat-card">
               <div className="stat-number">150+</div>
-              <div className="stat-label">Children Served</div>
+              <div className="stat-label">Children Currently Served</div>
+            </div>
+            <div className="stat-card">
+              <div className="stat-number">500+</div>
+              <div className="stat-label">Projected Capacity</div>
             </div>
             <div className="stat-card">
               <div className="stat-number">95%</div>
-              <div className="stat-label">School Enrollment</div>
+              <div className="stat-label">School Enrollment Rate</div>
             </div>
             <div className="stat-card">
               <div className="stat-number">24/7</div>
@@ -207,6 +252,107 @@ const OrphanageServices = () => {
             <div className="stat-card">
               <div className="stat-number">100%</div>
               <div className="stat-label">Love & Dedication</div>
+            </div>
+            <div className="stat-card">
+              <div className="stat-number">50+</div>
+              <div className="stat-label">Staff Members</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Care Approach */}
+      <section className="care-approach">
+        <div className="container">
+          <div className="section-header">
+            <h2>Our Comprehensive Care Approach</h2>
+            <p>We believe in nurturing the whole child - mind, body, and spirit - through evidence-based care practices.</p>
+          </div>
+
+          <div className="approach-grid">
+            <div className="approach-card">
+              <div className="approach-icon">🧠</div>
+              <h3>Psychological Wellbeing</h3>
+              <p>Professional counseling and therapy services to help children process trauma and build resilience.</p>
+              <ul>
+                <li>Individual therapy sessions</li>
+                <li>Group counseling programs</li>
+                <li>Trauma-informed care practices</li>
+                <li>Mental health monitoring</li>
+              </ul>
+            </div>
+            <div className="approach-card">
+              <div className="approach-icon">📚</div>
+              <h3>Educational Excellence</h3>
+              <p>Quality education tailored to each child's needs and learning style for academic success.</p>
+              <ul>
+                <li>Personalized learning plans</li>
+                <li>Extra tutoring support</li>
+                <li>STEM and arts programs</li>
+                <li>University preparation</li>
+              </ul>
+            </div>
+            <div className="approach-card">
+              <div className="approach-icon">💪</div>
+              <h3>Physical Health</h3>
+              <p>Comprehensive healthcare ensuring children grow strong and healthy.</p>
+              <ul>
+                <li>Regular health checkups</li>
+                <li>Nutritional programs</li>
+                <li>Sports and fitness activities</li>
+                <li>Preventive healthcare</li>
+              </ul>
+            </div>
+            <div className="approach-card">
+              <div className="approach-icon">🤝</div>
+              <h3>Social Development</h3>
+              <p>Building social skills and relationships for successful community integration.</p>
+              <ul>
+                <li>Peer interaction programs</li>
+                <li>Community engagement</li>
+                <li>Leadership development</li>
+                <li>Cultural activities</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Success Stories */}
+      <section className="success-stories">
+        <div className="container">
+          <div className="section-header">
+            <h2>Success Stories</h2>
+            <p>Meet some of the amazing children whose lives have been transformed through our care.</p>
+          </div>
+
+          <div className="stories-grid">
+            <div className="story-card">
+              <div className="story-content">
+                <h4>Ahmed's Journey</h4>
+                <p>"I came to BCFSA when I was 8 years old. Now I'm 16 and preparing for university. The staff here became my family and helped me discover my love for science."</p>
+                <div className="story-achievement">
+                  <strong>Achievement:</strong> Top student in state science competition
+                </div>
+              </div>
+            </div>
+            <div className="story-card">
+              <div className="story-content">
+                <h4>Fatima's Dream</h4>
+                <p>"Thanks to BCFSA, I learned to read and write. Now I help teach younger children and dream of becoming a teacher myself."</p>
+                <div className="story-achievement">
+                  <strong>Achievement:</strong> Literacy mentor for younger children
+                </div>
+              </div>
+            </div>
+            <div className="story-card">
+              <div className="story-content">
+                <h4>Ibrahim's Talent</h4>
+                <p>"The art program at BCFSA helped me discover my artistic talents. My paintings have been displayed in local exhibitions."</p>
+                <div className="story-achievement">
+                  <strong>Achievement:</strong> Young artist recognition award
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -225,19 +371,42 @@ const OrphanageServices = () => {
               <i className="fas fa-heart"></i>
               <h3>Donate</h3>
               <p>Your financial contributions help us provide food, shelter, education, and healthcare.</p>
+              <div className="donation-amounts">
+                <span>₦5,000/month feeds a child</span>
+                <span>₦20,000/month sponsors education</span>
+              </div>
               <Link to="/contact" className="btn btn-primary">Donate Now</Link>
             </div>
             <div className="help-card">
               <i className="fas fa-hands-helping"></i>
               <h3>Volunteer</h3>
               <p>Share your time and skills to make a direct impact in the lives of our children.</p>
+              <div className="volunteer-roles">
+                <span>Teaching & Tutoring</span>
+                <span>Healthcare Support</span>
+                <span>Recreation Activities</span>
+              </div>
               <Link to="/contact" className="btn btn-primary">Volunteer</Link>
             </div>
             <div className="help-card">
               <i className="fas fa-gift"></i>
               <h3>Sponsor a Child</h3>
               <p>Provide ongoing support for a specific child's education and development.</p>
+              <div className="sponsorship-benefits">
+                <span>Regular updates on progress</span>
+                <span>Direct communication</span>
+              </div>
               <Link to="/contact" className="btn btn-primary">Sponsor</Link>
+            </div>
+            <div className="help-card">
+              <i className="fas fa-building"></i>
+              <h3>Corporate Partnership</h3>
+              <p>Partner with us to make a larger impact through corporate social responsibility.</p>
+              <div className="partnership-options">
+                <span>Facility sponsorship</span>
+                <span>Program funding</span>
+              </div>
+              <Link to="/contact" className="btn btn-primary">Partner</Link>
             </div>
           </div>
         </div>

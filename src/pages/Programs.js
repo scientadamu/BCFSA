@@ -6,67 +6,6 @@ const Programs = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
 
   const programs = [
-    // Skills Training Programs
-    {
-      id: 'gbv-services',
-      title: 'Gender-Based Violence Prevention & Support',
-      category: 'social-services',
-      duration: 'Ongoing',
-      level: 'Community Support',
-      image: require('../assets/images/general/genderBaseViolence.jpg'),
-      description: 'Comprehensive support services, advocacy programs, and empowerment initiatives to combat gender-based violence.',
-      curriculum: [
-        'Crisis intervention and support',
-        'Counseling and therapy services',
-        'Legal assistance and advocacy',
-        'Economic empowerment programs',
-        'Community awareness campaigns'
-      ],
-      requirements: 'Open to all community members',
-      certification: 'Support Services Access',
-      careerPaths: ['Survivor Support', 'Community Advocacy', 'Legal Assistance', 'Counseling Services'],
-      link: '/gender-violence-services'
-    },
-    {
-      id: 'women-support',
-      title: 'Women Support & Empowerment',
-      category: 'social-services',
-      duration: '6 months',
-      level: 'All Levels',
-      image: require('../assets/images/general/marriage.jpg'),
-      description: 'Support and empowerment programs for divorcees, widows, and vulnerable women in our community.',
-      curriculum: [
-        'Emotional support and counseling',
-        'Skills training and development',
-        'Economic empowerment initiatives',
-        'Community building activities',
-        'Leadership development'
-      ],
-      requirements: 'Women in need of support',
-      certification: 'Women Empowerment Certificate',
-      careerPaths: ['Entrepreneur', 'Community Leader', 'Skilled Artisan', 'Business Owner'],
-      link: '/women-support'
-    },
-    {
-      id: 'orphanage-services',
-      title: 'Orphanage & Child Care Services',
-      category: 'social-services',
-      duration: 'Long-term Care',
-      level: 'Child Support',
-      image: require('../assets/images/general/ProposedOphanageHome.jpg'),
-      description: 'Comprehensive care and support for orphaned and vulnerable children, providing education, healthcare, and nurturing environment.',
-      curriculum: [
-        'Safe housing and accommodation',
-        'Quality education programs',
-        'Healthcare and nutrition',
-        'Psychological support',
-        'Life skills development'
-      ],
-      requirements: 'Orphaned and vulnerable children',
-      certification: 'Educational Certificates',
-      careerPaths: ['Education', 'Healthcare', 'Social Work', 'Community Service'],
-      link: '/orphanage-services'
-    },
     {
       id: 1,
       title: 'Computer Training',
@@ -223,7 +162,6 @@ const Programs = () => {
 
   const categories = [
     { id: 'all', name: 'All Programs' },
-    { id: 'social-services', name: 'Social Services' },
     { id: 'technology', name: 'Technology' },
     { id: 'creative', name: 'Creative Arts' },
     { id: 'culinary', name: 'Culinary Arts' },
@@ -238,8 +176,8 @@ const Programs = () => {
     <div className="programs-page">
       <div className="container">
         <div className="programs-hero">
-          <h1>Our Programs & Services</h1>
-          <p>Comprehensive skill development programs and social services designed to empower individuals and strengthen our community</p>
+          <h1>Our Training Programs</h1>
+          <p>Comprehensive skill development programs designed to prepare you for success in your chosen field</p>
         </div>
 
         <div className="programs-filter">
