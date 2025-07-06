@@ -136,6 +136,15 @@ const Header = () => {
               <ul className="nav-dropdown-menu">
                 <li>
                   <Link
+                    to="/orphanage-services"
+                    onClick={handleLinkClick}
+                    className={isActive('/orphanage-services') ? 'active' : ''}
+                  >
+                    Orphanage Services
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     to="/gender-violence-services"
                     onClick={handleLinkClick}
                     className={isActive('/gender-violence-services') ? 'active' : ''}
@@ -150,15 +159,6 @@ const Header = () => {
                     className={isActive('/women-support') ? 'active' : ''}
                   >
                     Divorcees & Widows Matchmaking
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    to="/orphanage-services"
-                    onClick={handleLinkClick}
-                    className={isActive('/orphanage-services') ? 'active' : ''}
-                  >
-                    Orphanage Services
                   </Link>
                 </li>
               </ul>

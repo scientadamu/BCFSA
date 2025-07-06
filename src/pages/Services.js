@@ -5,6 +5,23 @@ import './Services.css';
 const Services = () => {
   const services = [
     {
+      id: 'orphanage',
+      title: 'Orphanage & Child Care Services',
+      description: 'Comprehensive care and support for orphaned and vulnerable children, providing education, healthcare, and nurturing environment.',
+      image: require('../assets/images/general/ProposedOphanageHome.jpg'),
+      features: [
+        'Safe Housing & Accommodation',
+        'Quality Education Programs',
+        'Healthcare & Nutrition',
+        'Psychological Support',
+        'Life Skills Development',
+        'Recreational Activities'
+      ],
+      beneficiaries: '150+ Children in Care',
+      link: '/orphanage-services',
+      color: '#8e44ad'
+    },
+    {
       id: 'gender-violence',
       title: 'Gender-Based Violence Prevention & Support',
       description: 'Comprehensive support services, advocacy programs, and empowerment initiatives to combat gender-based violence in our communities.',
@@ -37,23 +54,6 @@ const Services = () => {
       beneficiaries: '650+ Women Connected',
       link: '/women-support',
       color: '#e91e63'
-    },
-    {
-      id: 'orphanage',
-      title: 'Orphanage & Child Care Services',
-      description: 'Comprehensive care and support for orphaned and vulnerable children, providing education, healthcare, and nurturing environment.',
-      image: require('../assets/images/general/ProposedOphanageHome.jpg'),
-      features: [
-        'Safe Housing & Accommodation',
-        'Quality Education Programs',
-        'Healthcare & Nutrition',
-        'Psychological Support',
-        'Life Skills Development',
-        'Recreational Activities'
-      ],
-      beneficiaries: '150+ Children in Care',
-      link: '/orphanage-services',
-      color: '#8e44ad'
     }
   ];
 
