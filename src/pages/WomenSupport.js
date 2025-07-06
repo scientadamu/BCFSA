@@ -220,8 +220,8 @@ const WomenSupport = () => {
       <section className="empowerment-approach">
         <div className="container">
           <div className="section-header">
-            <h2>Our Holistic Empowerment Approach</h2>
-            <p>We address the multifaceted challenges faced by divorced women and widows through comprehensive support systems.</p>
+            <h2>Our Professional Matchmaking Approach</h2>
+            <p>We provide a comprehensive, supportive approach to help divorced women and widows find compatible life partners through professional matchmaking services.</p>
           </div>
 
           <div className="approach-timeline">
