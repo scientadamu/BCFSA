@@ -252,6 +252,26 @@ body, html {
   transform: translateX(5px);
 }
 
+/* Ensure dropdown doesn't go off-screen on very wide screens */
+@media (min-width: 1400px) {
+  .nav-dropdown-menu {
+    max-width: 280px;
+  }
+}
+
+/* Adjust for screens where dropdown might be cut off */
+@media (max-width: 1300px) and (min-width: 1025px) {
+  .nav-dropdown-menu {
+    left: auto;
+    right: -20px;
+    transform: translateY(-10px);
+  }
+
+  .nav-dropdown:hover .nav-dropdown-menu {
+    transform: translateY(0);
+  }
+}
+
 /* ACTIVE LINK */
 .nav ul li a.active {
   background: rgba(255, 255, 255, 0.15);
