@@ -113,8 +113,8 @@ const WomenSupport = () => {
       <section className="services-overview">
         <div className="container">
           <div className="section-header">
-            <h2>Our Support Services</h2>
-            <p>Comprehensive services designed to help women rebuild their lives and achieve independence.</p>
+            <h2>Our Matchmaking Services</h2>
+            <p>Professional matchmaking services designed to help divorcees and widows find compatible life partners.</p>
           </div>
 
           <div className="services-grid">
@@ -135,8 +135,8 @@ const WomenSupport = () => {
       <section className="programs-section">
         <div className="container">
           <div className="section-header">
-            <h2>Our Programs</h2>
-            <p>Tailored programs addressing the specific needs of different groups of women.</p>
+            <h2>Our Matchmaking Programs</h2>
+            <p>Specialized programs designed for different stages of the matchmaking and relationship journey.</p>
           </div>
 
           <div className="programs-grid">
@@ -190,27 +190,27 @@ const WomenSupport = () => {
       {/* Support Process */}
       <section className="support-process">
         <div className="container">
-          <h2>How We Support You</h2>
+          <h2>Our Matchmaking Process</h2>
           <div className="process-steps">
             <div className="step">
               <div className="step-number">1</div>
-              <h3>Initial Assessment</h3>
-              <p>We assess your needs and circumstances to create a personalized support plan</p>
+              <h3>Registration & Profile</h3>
+              <p>Complete registration with detailed profile creation and personal preferences assessment</p>
             </div>
             <div className="step">
               <div className="step-number">2</div>
-              <h3>Counseling & Support</h3>
-              <p>Professional counseling and peer support to help with emotional healing</p>
+              <h3>Compatibility Matching</h3>
+              <p>Professional assessment and careful matching based on values, interests, and life goals</p>
             </div>
             <div className="step">
               <div className="step-number">3</div>
-              <h3>Skills Training</h3>
-              <p>Vocational training in marketable skills for economic independence</p>
+              <h3>Introduction & Meetings</h3>
+              <p>Facilitated introductions and guided meetings in safe, comfortable environments</p>
             </div>
             <div className="step">
               <div className="step-number">4</div>
-              <h3>Economic Empowerment</h3>
-              <p>Business training, microfinance, and ongoing support for sustainability</p>
+              <h3>Relationship Support</h3>
+              <p>Ongoing counseling and support throughout courtship and marriage preparation</p>
             </div>
           </div>
         </div>
@@ -288,27 +288,27 @@ const WomenSupport = () => {
           <div className="stats-grid">
             <div className="stat-card">
               <div className="stat-number">650+</div>
-              <div className="stat-label">Women Empowered</div>
+              <div className="stat-label">Women Registered</div>
             </div>
             <div className="stat-card">
               <div className="stat-number">85%</div>
-              <div className="stat-label">Achieved Independence</div>
+              <div className="stat-label">Successful Matches</div>
+            </div>
+            <div className="stat-card">
+              <div className="stat-number">400+</div>
+              <div className="stat-label">Happy Marriages</div>
             </div>
             <div className="stat-card">
               <div className="stat-number">1,200+</div>
-              <div className="stat-label">Children Benefited</div>
+              <div className="stat-label">Children in Blended Families</div>
             </div>
             <div className="stat-card">
-              <div className="stat-number">50+</div>
-              <div className="stat-label">Businesses Started</div>
-            </div>
-            <div className="stat-card">
-              <div className="stat-number">₦25M+</div>
-              <div className="stat-label">Loans Disbursed</div>
+              <div className="stat-number">3</div>
+              <div className="stat-label">Average Months to Match</div>
             </div>
             <div className="stat-card">
               <div className="stat-number">95%</div>
-              <div className="stat-label">Loan Repayment Rate</div>
+              <div className="stat-label">Marriage Success Rate</div>
             </div>
           </div>
         </div>
