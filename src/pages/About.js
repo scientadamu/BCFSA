@@ -148,6 +148,10 @@ const About = () => {
 
           <section className="leadership-section">
             <h2>Our Leadership Team</h2>
+            <p className="leadership-intro">
+              Meet the visionary leaders who guide BCFSA in its mission to empower youth and support vulnerable children.
+              Our leadership team brings together experience, passion, and commitment to creating positive change in Niger State.
+            </p>
 
             {/* Governor Section */}
             <div id="governor" className="leader-profile">
@@ -164,14 +168,27 @@ const About = () => {
                     sustainable economic growth. As the Patron of BCFSA, he has been instrumental in the establishment
                     and growth of our institution, providing ongoing support for program development and expansion.
                   </p>
+                  <p>
+                    Under his leadership, Niger State has witnessed unprecedented development in education, agriculture,
+                    and youth empowerment. His commitment to creating opportunities for young people and supporting
+                    vulnerable populations has made BCFSA a flagship institution for skills development in the region.
+                  </p>
                   <div className="achievements">
-                    <h5>Key Achievements:</h5>
+                    <h5>Key Achievements & Initiatives:</h5>
                     <ul>
                       <li>Established multiple skills acquisition centers across Niger State</li>
-                      <li>Implemented modern farming techniques and agricultural development</li>
+                      <li>Implemented modern farming techniques and agricultural development programs</li>
                       <li>Launched comprehensive programs for orphans and vulnerable groups</li>
                       <li>Initiated major infrastructure development projects</li>
+                      <li>Promoted gender equality and women empowerment initiatives</li>
+                      <li>Supported youth entrepreneurship and job creation programs</li>
                     </ul>
+                  </div>
+                  <div className="leadership-quote">
+                    <blockquote>
+                      "Our youth are the future of Niger State. Through quality skills training and support for vulnerable children,
+                      we are building a stronger, more prosperous state for all."
+                    </blockquote>
                   </div>
                 </div>
               </div>
@@ -192,14 +209,28 @@ const About = () => {
                     leadership, BCFSA has become a beacon of hope and transformation in Niger State, successfully
                     training over 1,000 young people with an 85% employment rate among graduates.
                   </p>
+                  <p>
+                    With extensive experience in education, community development, and social services, the Chairman
+                    has dedicated his career to creating opportunities for disadvantaged youth and vulnerable children.
+                    His strategic vision has positioned BCFSA as a model institution for skills development and child care.
+                  </p>
                   <div className="achievements">
-                    <h5>Leadership Achievements:</h5>
+                    <h5>Leadership Achievements & Impact:</h5>
                     <ul>
                       <li>Established 8 comprehensive skills training programs</li>
                       <li>Developed modern training facilities and equipment</li>
                       <li>Created partnerships with government and private organizations</li>
                       <li>Launched women empowerment and gender-based violence prevention programs</li>
+                      <li>Initiated the ₦2.5 billion orphanage home project</li>
+                      <li>Built strategic alliances with international development organizations</li>
+                      <li>Implemented sustainable funding models for program continuity</li>
                     </ul>
+                  </div>
+                  <div className="leadership-quote">
+                    <blockquote>
+                      "Every young person deserves the opportunity to develop their potential. Through skills training and
+                      compassionate care, we are not just changing individual lives - we are transforming our entire community."
+                    </blockquote>
                   </div>
                 </div>
               </div>
@@ -235,22 +266,76 @@ const About = () => {
 
             {/* Staff Section */}
             <div id="staff" className="staff-section">
-              <h3>Our Dedicated Staff</h3>
+              <h3>Our Dedicated Staff Team</h3>
+              <p className="staff-intro">
+                Our experienced and committed staff members are the backbone of BCFSA's success. Each team member
+                brings unique expertise and dedication to ensuring the highest quality of training and care for our
+                beneficiaries.
+              </p>
               <div className="staff-grid">
                 <div className="staff-card">
                   <img src={require('../assets/images/general/Sec BCFSA.PNG')} alt="Secretary" />
                   <h4>Secretary</h4>
-                  <p>Coordinating programs and ensuring smooth operations across all departments.</p>
+                  <p>Coordinating programs and ensuring smooth operations across all departments. Manages administrative
+                     functions and serves as the primary liaison between different program areas.</p>
+                  <div className="staff-responsibilities">
+                    <strong>Key Responsibilities:</strong>
+                    <ul>
+                      <li>Program coordination and scheduling</li>
+                      <li>Administrative oversight</li>
+                      <li>Communication management</li>
+                    </ul>
+                  </div>
                 </div>
                 <div className="staff-card">
                   <img src={require('../assets/images/general/controller.PNG')} alt="Controller" />
-                  <h4>Controller</h4>
-                  <p>Managing finances and ensuring proper resource allocation for all programs.</p>
+                  <h4>Financial Controller</h4>
+                  <p>Managing finances and ensuring proper resource allocation for all programs. Oversees budget
+                     planning, financial reporting, and ensures transparency in all financial operations.</p>
+                  <div className="staff-responsibilities">
+                    <strong>Key Responsibilities:</strong>
+                    <ul>
+                      <li>Financial planning and budgeting</li>
+                      <li>Resource allocation</li>
+                      <li>Financial reporting and compliance</li>
+                    </ul>
+                  </div>
                 </div>
                 <div className="staff-card">
                   <img src={require('../assets/images/general/ministry of labour.PNG')} alt="Ministry Representative" />
-                  <h4>Ministry Representative</h4>
-                  <p>Liaison with government agencies and policy implementation.</p>
+                  <h4>Ministry of Labour Representative</h4>
+                  <p>Liaison with government agencies and policy implementation. Ensures compliance with government
+                     regulations and facilitates partnerships with relevant ministries and agencies.</p>
+                  <div className="staff-responsibilities">
+                    <strong>Key Responsibilities:</strong>
+                    <ul>
+                      <li>Government liaison and partnerships</li>
+                      <li>Policy implementation</li>
+                      <li>Regulatory compliance</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div className="additional-staff">
+                <h4>Additional Support Staff</h4>
+                <div className="support-roles">
+                  <div className="role-item">
+                    <strong>Training Coordinators:</strong> Specialized staff who oversee specific skill training programs
+                    and ensure quality delivery of curriculum.
+                  </div>
+                  <div className="role-item">
+                    <strong>Child Care Workers:</strong> Dedicated professionals who provide care and support for children
+                    in our orphanage programs.
+                  </div>
+                  <div className="role-item">
+                    <strong>Counselors:</strong> Qualified counselors who provide psychological support and guidance to
+                    both trainees and children in our care.
+                  </div>
+                  <div className="role-item">
+                    <strong>Administrative Support:</strong> Essential support staff who handle day-to-day operations,
+                    record keeping, and facility management.
+                  </div>
                 </div>
               </div>
             </div>
@@ -263,21 +348,76 @@ const About = () => {
                   <p>
                     BCFSA proudly hosts National Youth Service Corps (NYSC) members who contribute significantly
                     to our mission. These dedicated young graduates bring fresh perspectives, energy, and expertise
-                    to our training programs while fulfilling their national service obligations.
+                    to our training programs while fulfilling their national service obligations. Our partnership
+                    with NYSC creates a dynamic environment where recent graduates can apply their knowledge while
+                    gaining valuable experience in community development and skills training.
                   </p>
                   <div className="nysc-contributions">
                     <h5>Corp Members Contribute Through:</h5>
                     <ul>
-                      <li>Teaching and training in various skill areas</li>
-                      <li>Assisting with administrative duties</li>
-                      <li>Supporting orphanage activities and child care</li>
+                      <li>Teaching and training in various skill areas including computer literacy and digital skills</li>
+                      <li>Assisting with administrative duties and program coordination</li>
+                      <li>Supporting orphanage activities and child care programs</li>
                       <li>Community outreach and awareness programs</li>
                       <li>Technology support and digital literacy training</li>
+                      <li>Research and development of new training methodologies</li>
+                      <li>Mentoring and counseling services for trainees</li>
+                      <li>Documentation and reporting of program activities</li>
                     </ul>
+                  </div>
+                  <div className="nysc-impact">
+                    <h5>Impact & Benefits:</h5>
+                    <div className="impact-stats-small">
+                      <div className="impact-item">
+                        <strong>15+</strong>
+                        <span>Corp Members Annually</span>
+                      </div>
+                      <div className="impact-item">
+                        <strong>500+</strong>
+                        <span>Trainees Supported</span>
+                      </div>
+                      <div className="impact-item">
+                        <strong>8</strong>
+                        <span>Program Areas Covered</span>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="nysc-testimonial">
+                    <blockquote>
+                      "Serving at BCFSA has been a transformative experience. I've been able to use my skills to
+                      make a real difference in young people's lives while gaining invaluable experience in
+                      community development and education."
+                    </blockquote>
+                    <cite>- NYSC Corp Member, 2024</cite>
                   </div>
                 </div>
                 <div className="nysc-image">
                   <img src={require('../assets/images/general/465A4630.jpg')} alt="NYSC Corp Members" />
+                  <div className="image-caption">
+                    <p>NYSC Corp Members actively participating in skills training programs</p>
+                  </div>
+                </div>
+              </div>
+
+              <div className="nysc-programs">
+                <h4>NYSC Partnership Programs</h4>
+                <div className="partnership-grid">
+                  <div className="partnership-item">
+                    <h5>🎓 Skills Development</h5>
+                    <p>Corp members lead specialized training sessions in their areas of expertise</p>
+                  </div>
+                  <div className="partnership-item">
+                    <h5>👥 Community Service</h5>
+                    <p>Organizing community outreach programs and awareness campaigns</p>
+                  </div>
+                  <div className="partnership-item">
+                    <h5>💻 Digital Innovation</h5>
+                    <p>Introducing new technologies and digital solutions to enhance training</p>
+                  </div>
+                  <div className="partnership-item">
+                    <h5>📚 Educational Support</h5>
+                    <p>Providing additional educational support and tutoring services</p>
+                  </div>
                 </div>
               </div>
             </div>

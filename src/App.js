@@ -14,6 +14,7 @@ import Programs from './pages/Programs';
 import SkillsPrograms from './pages/SkillsPrograms';
 import OrphanageServices from './pages/OrphanageServices';
 import FightGBV from './pages/FightGBV';
+import GenderViolenceServices from './pages/GenderViolenceServices';
 import WomenSupport from './pages/WomenSupport';
 import Projects from './pages/Projects';
 import Registration from './pages/Registration';
@@ -44,6 +45,7 @@ function App() {
               <Route path="/skills-programs" element={<SkillsPrograms />} />
               <Route path="/orphanage-services" element={<OrphanageServices />} />
               <Route path="/fight-gbv" element={<FightGBV />} />
+              <Route path="/gender-violence-services" element={<GenderViolenceServices />} />
               <Route path="/women-support" element={<WomenSupport />} />
               <Route path="/projects" element={<Projects />} />
               <Route path="/registration" element={<Registration />} />
