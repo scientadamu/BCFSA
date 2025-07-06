@@ -120,7 +120,7 @@ const GenderViolenceServices = () => {
           <h2>Our Prevention & Support Programs</h2>
           <div className="programs-grid">
             <div className="program-card">
-              <img src={require('../assets/images/general/women-empowerment.jpg')} alt="Women Empowerment" />
+              <img src={require('../assets/images/general/marriage.jpg')} alt="Women Empowerment" />
               <div className="program-content">
                 <h3>Women Empowerment Initiative</h3>
                 <p>Comprehensive program focusing on economic empowerment, leadership development, and skills training for women.</p>
@@ -132,7 +132,7 @@ const GenderViolenceServices = () => {
               </div>
             </div>
             <div className="program-card">
-              <img src={require('../assets/images/general/youth-advocacy.jpg')} alt="Youth Advocacy" />
+              <img src={require('../assets/images/general/465A4630.jpg')} alt="Youth Advocacy" />
               <div className="program-content">
                 <h3>Youth Advocacy Program</h3>
                 <p>Engaging young people as advocates for gender equality and violence prevention in their communities.</p>
@@ -144,7 +144,7 @@ const GenderViolenceServices = () => {
               </div>
             </div>
             <div className="program-card">
-              <img src={require('../assets/images/general/family-support.jpg')} alt="Family Support" />
+              <img src={require('../assets/images/general/ProposedOphanageHome.jpg')} alt="Family Support" />
               <div className="program-content">
                 <h3>Family Support Services</h3>
                 <p>Holistic support for families affected by gender-based violence, including children and extended family members.</p>
@@ -195,7 +195,7 @@ const GenderViolenceServices = () => {
               </div>
             </div>
             <div className="warning-image">
-              <img src={require('../assets/images/general/support-hands.jpg')} alt="Support and Care" />
+              <img src={require('../assets/images/general/genderBaseViolence.jpg')} alt="Support and Care" />
             </div>
           </div>
         </div>

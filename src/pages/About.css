@@ -683,3 +683,248 @@
     padding: 2rem 1rem;
   }
 }
+
+/* Leadership Section Enhancements */
+.leadership-intro {
+  text-align: center;
+  font-size: 1.1rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto 3rem;
+  line-height: 1.6;
+}
+
+.leadership-quote {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #f8f9fa;
+  border-left: 4px solid #0056b3;
+  border-radius: 8px;
+}
+
+.leadership-quote blockquote {
+  font-style: italic;
+  font-size: 1.1rem;
+  color: #2c3e50;
+  margin: 0;
+  line-height: 1.6;
+}
+
+/* Staff Section Enhancements */
+.staff-intro {
+  text-align: center;
+  font-size: 1rem;
+  color: #666;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+.staff-responsibilities {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.staff-responsibilities strong {
+  color: #0056b3;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.staff-responsibilities ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.staff-responsibilities ul li {
+  padding: 0.25rem 0;
+  padding-left: 1rem;
+  position: relative;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.staff-responsibilities ul li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #0056b3;
+}
+
+.additional-staff {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 15px;
+}
+
+.additional-staff h4 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.support-roles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+}
+
+.role-item {
+  padding: 1rem;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.role-item strong {
+  color: #0056b3;
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* NYSC Section Enhancements */
+.nysc-impact {
+  margin-top: 2rem;
+}
+
+.impact-stats-small {
+  display: flex;
+  gap: 2rem;
+  margin-top: 1rem;
+  flex-wrap: wrap;
+}
+
+.impact-item {
+  text-align: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  min-width: 120px;
+}
+
+.impact-item strong {
+  display: block;
+  font-size: 1.5rem;
+  color: #0056b3;
+  font-weight: 700;
+}
+
+.impact-item span {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.nysc-testimonial {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  background: #e8f4fd;
+  border-radius: 8px;
+  border-left: 4px solid #0056b3;
+}
+
+.nysc-testimonial blockquote {
+  font-style: italic;
+  margin: 0 0 1rem 0;
+  color: #2c3e50;
+  line-height: 1.6;
+}
+
+.nysc-testimonial cite {
+  font-size: 0.9rem;
+  color: #666;
+  font-weight: 500;
+}
+
+.nysc-programs {
+  margin-top: 3rem;
+  padding: 2rem;
+  background: #f8f9fa;
+  border-radius: 15px;
+}
+
+.nysc-programs h4 {
+  color: #2c3e50;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.partnership-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+}
+
+.partnership-item {
+  padding: 1.5rem;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.partnership-item h5 {
+  color: #0056b3;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.partnership-item p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Enhanced Mobile Styles for New Sections */
+@media (max-width: 768px) {
+  .support-roles {
+    grid-template-columns: 1fr;
+  }
+
+  .partnership-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .impact-stats-small {
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .impact-item {
+    min-width: 100px;
+  }
+
+  .additional-staff,
+  .nysc-programs {
+    padding: 1.5rem;
+  }
+
+  .leadership-quote,
+  .nysc-testimonial {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .impact-stats-small {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .impact-item {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .additional-staff,
+  .nysc-programs {
+    padding: 1rem;
+  }
+
+  .partnership-item {
+    padding: 1rem;
+  }
+}
