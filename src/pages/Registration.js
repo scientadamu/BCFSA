@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import apiService from '../services/api';
 import './Registration.css';
 
 const Registration = () => {
@@ -8,9 +9,11 @@ const Registration = () => {
     email: '',
     phone: '',
     age: '',
+    dateOfBirth: '',
     gender: '',
     address: '',
     program: '',
+    programId: '',
     education: '',
     experience: '',
     motivation: '',
@@ -21,16 +24,42 @@ const Registration = () => {
   });
 
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
   const [errors, setErrors] = useState({});
+  const [programs, setPrograms] = useState([]);
+  const [apiError, setApiError] = useState('');
 
-  const programs = [
-    'Computer Training',
-    'Fashion Design',
-    'Catering Services',
-    'Shoe Cobbling',
-    'Jewelry Making',
-    'Local Weaving'
-  ];
+  // Fetch programs from backend on component mount
+  useEffect(() => {
+    const fetchPrograms = async () => {
+      try {
+        const response = await apiService.getPrograms({ active: true });
+        if (response.success) {
+          setPrograms(response.data);
+        }
+      } catch (error) {
+        console.error('Failed to fetch programs:', error);
+        setApiError('Failed to load programs. Please refresh the page.');
+        // Fallback to hardcoded programs if API fails
+        setPrograms([
+          { id: 1, title: 'Computer Training' },
+          { id: 2, title: 'Fashion Design' },
+          { id: 3, title: 'Catering Services' },
+          { id: 4, title: 'Shoe Cobbling' },
+          { id: 5, title: 'Jewelry Making' },
+          { id: 6, title: 'Local Weaving' },
+          { id: 7, title: 'Graphic Design' },
+          { id: 8, title: 'Digital Marketing' },
+          { id: 9, title: 'Knitting' },
+          { id: 10, title: 'Kuli-kuli Production' },
+          { id: 11, title: 'Web Development' },
+          { id: 12, title: 'Mobile App Development' }
+        ]);
+      }
+    };
+
+    fetchPrograms();
+  }, []);
 
   const validateForm = () => {
     const newErrors = {};
@@ -84,18 +113,126 @@ const Registration = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setApiError('');
 
     if (validateForm()) {
-      // Here you would typically send the data to a server
-      console.log('Registration data:', formData);
+      setIsLoading(true);
 
-      // Simulate API call
-      setTimeout(() => {
-        setIsSubmitted(true);
-      }, 1000);
+      try {
+        // Calculate date of birth from age
+        const currentYear = new Date().getFullYear();
+        const birthYear = currentYear - parseInt(formData.age);
+        const dateOfBirth = `${birthYear}-01-01`; // Default to January 1st
+
+        // Find the selected program
+        const selectedProgram = programs.find(p =>
+          p.title === formData.program ||
+          p.id === parseInt(formData.program) ||
+          p.id === formData.program
+        );
+
+        const registrationData = {
+          firstName: formData.firstName,
+          lastName: formData.lastName,
+          email: formData.email,
+          phone: formData.phone,
+          dateOfBirth,
+          gender: formData.gender,
+          address: formData.address,
+          programId: selectedProgram ? selectedProgram.id : parseInt(formData.program),
+          education: formData.education,
+          experience: formData.experience,
+          motivation: formData.motivation,
+          emergencyContact: formData.emergencyContact,
+          emergencyPhone: formData.emergencyPhone,
+          hasDisability: formData.hasDisability,
+          disabilityDetails: formData.disabilityDetails
+        };
+
+        console.log('Submitting registration data:', registrationData);
+        console.log('Selected program:', selectedProgram);
+
+        // Test backend connection first
+        try {
+          const healthCheck = await fetch('http://localhost:5003/api/health');
+          if (!healthCheck.ok) {
+            throw new Error('Backend server is not responding');
+          }
+          console.log('✅ Backend server is running');
+        } catch (error) {
+          throw new Error('Cannot connect to server. Please make sure the backend is running.');
+        }
+
+        // Create applicant record (not user account)
+        const applicantData = {
+          firstName: registrationData.firstName,
+          lastName: registrationData.lastName,
+          email: registrationData.email,
+          phone: registrationData.phone,
+          dateOfBirth: registrationData.dateOfBirth,
+          gender: registrationData.gender,
+          address: registrationData.address,
+          education: registrationData.education,
+          experience: registrationData.experience,
+          motivation: registrationData.motivation,
+          program: selectedProgram ? selectedProgram.title : formData.program,
+          emergencyContactName: registrationData.emergencyContact,
+          emergencyContactPhone: registrationData.emergencyPhone,
+          hasDisability: formData.hasDisability === 'yes',
+          disabilityDetails: formData.disabilityDetails,
+          status: 'pending'
+        };
+
+        console.log('Sending applicant registration:', applicantData);
+
+        const response = await fetch('http://localhost:5003/api/applicants', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify(applicantData)
+        });
+
+        const result = await response.json();
+        console.log('Application response:', result);
+
+        if (result.success) {
+          setIsSubmitted(true);
+          console.log('Application submitted successfully:', result);
+        } else {
+          setApiError(result.message || 'Application submission failed. Please try again.');
+        }
+      } catch (error) {
+        console.error('Registration error:', error);
+        setApiError(error.message || 'Registration failed. Please check your connection and try again.');
+      } finally {
+        setIsLoading(false);
+      }
     }
+  };
+
+  const handleClearForm = () => {
+    setFormData({
+      firstName: '',
+      lastName: '',
+      email: '',
+      phone: '',
+      age: '',
+      gender: '',
+      address: '',
+      program: '',
+      education: '',
+      experience: '',
+      motivation: '',
+      emergencyContact: '',
+      emergencyPhone: '',
+      hasDisability: '',
+      disabilityDetails: ''
+    });
+    setErrors({});
+    setApiError('');
   };
 
   if (isSubmitted) {
@@ -103,8 +240,8 @@ const Registration = () => {
       <div className="registration-page">
         <div className="container">
           <div className="success-message">
-            <h2>Registration Successful!</h2>
-            <p>Thank you for registering with BCFSA. We will contact you soon with further details about your selected program.</p>
+            <h2>Application Submitted Successfully!</h2>
+            <p>Thank you for applying to BCFSA. Your application has been received and will be reviewed by our admissions team. We will contact you soon with updates about your application status.</p>
             <button 
               className="btn btn-primary" 
               onClick={() => {
@@ -128,7 +265,7 @@ const Registration = () => {
                 });
               }}
             >
-              Register Another Person
+              Submit Another Application
             </button>
           </div>
         </div>
@@ -145,6 +282,12 @@ const Registration = () => {
         </div>
 
         <form className="registration-form" onSubmit={handleSubmit}>
+          {apiError && (
+            <div className="error-banner">
+              <p>❌ {apiError}</p>
+            </div>
+          )}
+
           <div className="form-section">
             <h3>Personal Information</h3>
             <div className="form-row">
@@ -313,12 +456,25 @@ const Registration = () => {
                 id="program"
                 name="program"
                 value={formData.program}
-                onChange={handleChange}
+                onChange={(e) => {
+                  const selectedProgram = programs.find(p => p.id === parseInt(e.target.value));
+                  setFormData({
+                    ...formData,
+                    program: e.target.value,
+                    programId: selectedProgram ? selectedProgram.id : ''
+                  });
+                  if (errors.program) {
+                    setErrors({ ...errors, program: '' });
+                  }
+                }}
                 required
+                className={errors.program ? 'error' : ''}
               >
                 <option value="">Select a Program</option>
                 {programs.map(program => (
-                  <option key={program} value={program}>{program}</option>
+                  <option key={program.id || program} value={program.id || program}>
+                    {program.title || program}
+                  </option>
                 ))}
               </select>
             </div>
@@ -367,8 +523,21 @@ const Registration = () => {
           </div>
 
           <div className="form-actions">
-            <button type="submit" className="btn btn-primary">Submit Registration</button>
-            <button type="reset" className="btn btn-secondary">Clear Form</button>
+            <button
+              type="submit"
+              className="btn btn-primary"
+              disabled={isLoading}
+            >
+              {isLoading ? 'Submitting...' : 'Submit Registration'}
+            </button>
+            <button
+              type="button"
+              className="btn btn-secondary"
+              onClick={handleClearForm}
+              disabled={isLoading}
+            >
+              Clear Form
+            </button>
           </div>
         </form>
       </div>

@@ -34,12 +34,24 @@ const Header = () => {
   const handleLinkClick = () => {
     setIsMenuOpen(false);
     setShowUserMenu(false);
+    // Scroll to top immediately
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
   };
 
   const handleLogout = () => {
     logout();
     setShowUserMenu(false);
     navigate('/');
+    // Scroll to top
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
   };
 
   const navigateToDashboard = () => {
@@ -60,6 +72,14 @@ const Header = () => {
       default:
         navigate('/');
     }
+    // Scroll to top after navigation
+    setTimeout(() => {
+      window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: 'smooth'
+      });
+    }, 100);
   };
 
   return (
@@ -106,11 +126,20 @@ const Header = () => {
             </li>
             <li>
               <Link
-                to="/registration"
+                to="/projects"
                 onClick={handleLinkClick}
-                className={isActive('/registration') ? 'active' : ''}
+                className={isActive('/projects') ? 'active' : ''}
               >
-                Registration
+                Projects
+              </Link>
+            </li>
+            <li>
+              <Link
+                to="/application"
+                onClick={handleLinkClick}
+                className={isActive('/application') ? 'active' : ''}
+              >
+                Application
               </Link>
             </li>
             <li>

@@ -130,31 +130,116 @@
 
 .social-links {
   display: flex;
-  gap: 12px;
+  gap: 15px;
   margin-top: 2rem;
+  justify-content: flex-start;
 }
 
-.social-links a {
+.social-link {
+  position: relative;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: 45px;
-  height: 45px;
+  width: 50px;
+  height: 50px;
   background: rgba(255, 255, 255, 0.1);
   color: white;
+  border-radius: 12px;
   text-decoration: none;
-  border-radius: 8px;
-  transition: all 0.3s ease;
-  font-size: 1.3rem;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  font-size: 1.4rem;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  overflow: hidden;
 }
 
-.social-links a:hover {
-  background: #00d4ff;
-  transform: translateY(-3px);
-  box-shadow: 0 8px 25px rgba(0, 212, 255, 0.3);
-  border-color: #00d4ff;
+.social-link::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  transition: left 0.5s;
 }
+
+.social-link:hover::before {
+  left: 100%;
+}
+
+/* Individual Brand Colors */
+.social-link.facebook:hover {
+  background: #1877f2;
+  border-color: #1877f2;
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 30px rgba(24, 119, 242, 0.4);
+}
+
+.social-link.twitter:hover {
+  background: #1da1f2;
+  border-color: #1da1f2;
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 30px rgba(29, 161, 242, 0.4);
+}
+
+.social-link.instagram:hover {
+  background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+  border-color: #e6683c;
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 30px rgba(225, 48, 108, 0.4);
+}
+
+.social-link.linkedin:hover {
+  background: #0077b5;
+  border-color: #0077b5;
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 30px rgba(0, 119, 181, 0.4);
+}
+
+.social-link.youtube:hover {
+  background: #ff0000;
+  border-color: #ff0000;
+  transform: translateY(-5px) scale(1.1);
+  box-shadow: 0 10px 30px rgba(255, 0, 0, 0.4);
+}
+
+/* Tooltip Styles */
+.social-tooltip {
+  position: absolute;
+  bottom: 120%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: rgba(0, 0, 0, 0.9);
+  color: white;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  white-space: nowrap;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 1000;
+}
+
+.social-tooltip::after {
+  content: '';
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: rgba(0, 0, 0, 0.9);
+}
+
+.social-link:hover .social-tooltip {
+  opacity: 1;
+  visibility: visible;
+  bottom: 130%;
+}
+
 
 .contact-info p {
   margin-bottom: 1rem;
@@ -162,7 +247,8 @@
   align-items: center;
   gap: 12px;
   font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.9);
+  color: #000000;
+  font-weight: 400;
 }
 
 .footer-bottom {

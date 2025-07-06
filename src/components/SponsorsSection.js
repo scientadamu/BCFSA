@@ -1,30 +1,53 @@
 import React from 'react';
 import './SponsorsSection.css';
+import {
+  HiOutlineOfficeBuilding,
+  HiOutlineUserGroup,
+  HiOutlineCog,
+  HiOutlineGlobeAlt
+} from 'react-icons/hi';
 
 const SponsorsSection = () => {
   const sponsors = [
     {
       id: 1,
-      name: 'Ministry of Labour',
-      type: 'Government Partner',
-      image: require('../assets/images/general/ministry of labour.PNG'),
-      description: 'Supporting youth employment and skills development initiatives',
+      name: 'Niger State Government',
+      type: 'State Government',
+      image: require('../assets/images/general/farmrBago.jpg'),
+      description: 'Leading support from His Excellency, Governor Farmer Umaru Bago for youth empowerment and skills development',
       level: 'primary'
     },
     {
       id: 2,
       name: 'Controller, Ministry of Labour',
       type: 'Government Official',
-      image: require('../assets/images/general/Controler, Ministry of Labour.PNG'),
+      image: require('../assets/images/general/controller.PNG'),
       description: 'Overseeing program implementation and quality assurance',
       level: 'primary'
     },
     {
       id: 3,
+      name: 'Ministry of Labour and Employment',
+      type: 'Government Ministry',
+      image: require('../assets/images/general/ministry of labour.PNG'),
+      description: 'Supporting youth employment and skills development initiatives across Niger State',
+      level: 'primary'
+    },
+    
+    {
+      id: 4,
       name: 'Emir of Agaie',
       type: 'Traditional Authority',
       image: require('../assets/images/general/emre of Agaie.jpg'),
       description: 'Providing traditional leadership support and community endorsement',
+      level: 'secondary'
+    },
+    {
+      id: 5,
+      name: 'Chairman of Agaie',
+      type: 'Local Government',
+      image: require('../assets/images/general/chairman.webp'),
+      description: 'Local government support and community development partnership',
       level: 'secondary'
     }
   ];
@@ -33,22 +56,22 @@ const SponsorsSection = () => {
     {
       title: 'Government Partnerships',
       description: 'Working closely with government agencies to align our programs with national development goals',
-      icon: '🏛️'
+      icon: <HiOutlineOfficeBuilding />
     },
     {
       title: 'Community Support',
       description: 'Strong backing from traditional rulers and community leaders for sustainable impact',
-      icon: '🤝'
+      icon: <HiOutlineUserGroup />
     },
     {
       title: 'Industry Collaboration',
       description: 'Partnerships with local businesses to ensure job placement for our graduates',
-      icon: '🏭'
+      icon: <HiOutlineCog />
     },
     {
       title: 'International Support',
       description: 'Collaboration with international organizations for best practices and funding',
-      icon: '🌍'
+      icon: <HiOutlineGlobeAlt />
     }
   ];
 

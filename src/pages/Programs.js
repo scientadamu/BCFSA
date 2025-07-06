@@ -243,7 +243,7 @@ const Programs = () => {
                 </div>
 
                 <div className="program-actions">
-                  <Link to="/registration" className="btn btn-primary">Register Now</Link>
+                  <Link to="/application?type=trainee" className="btn btn-primary">Register Now</Link>
                   <button className="btn btn-secondary">Learn More</button>
                 </div>
               </div>
@@ -254,7 +254,7 @@ const Programs = () => {
         <div className="programs-cta">
           <h2>Ready to Start Your Journey?</h2>
           <p>Join thousands of youth who have transformed their lives through our training programs</p>
-          <Link to="/registration" className="btn btn-primary">Register Today</Link>
+          <Link to="/application?type=trainee" className="btn btn-primary">Register Today</Link>
         </div>
       </div>
     </div>

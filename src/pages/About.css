@@ -197,8 +197,8 @@
 
 .impact-stats {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1.5rem;
 }
 
 .stat-card {
@@ -267,5 +267,185 @@
 
   .stat-card h3 {
     font-size: 2rem;
+  }
+}
+
+/* Orphanage Section */
+.orphanage-section {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 4rem 0;
+  border-radius: 15px;
+  margin: 3rem 0;
+}
+
+.orphanage-section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 3rem;
+  font-weight: bold;
+}
+
+.orphanage-features {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.feature-item {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-5px);
+}
+
+.feature-item h4 {
+  color: #007bff;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.feature-item p {
+  color: #6c757d;
+  line-height: 1.6;
+  margin: 0;
+}
+
+.image-caption {
+  background: rgba(0, 0, 0, 0.8);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  margin-top: -4px;
+  border-radius: 0 0 10px 10px;
+}
+
+.image-caption p {
+  margin: 0;
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+/* Programs Overview */
+.programs-overview {
+  margin: 4rem 0;
+}
+
+.programs-overview h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 3rem;
+  font-weight: bold;
+}
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+}
+
+.program-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 15px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  border-left: 5px solid #007bff;
+}
+
+.program-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.program-card:nth-child(2) {
+  border-left-color: #28a745;
+}
+
+.program-icon {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.program-card h3 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.program-card p {
+  color: #6c757d;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.program-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.program-card li {
+  color: #495057;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid #e9ecef;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.program-card li:before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #28a745;
+  font-weight: bold;
+}
+
+.program-card li:last-child {
+  border-bottom: none;
+}
+
+/* Responsive Design for New Sections */
+@media (max-width: 768px) {
+  .orphanage-features {
+    grid-template-columns: 1fr;
+  }
+
+  .programs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .program-card {
+    padding: 2rem;
+  }
+
+  .orphanage-section h2,
+  .programs-overview h2 {
+    font-size: 2rem;
+  }
+
+  .impact-stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .impact-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .orphanage-section,
+  .programs-overview {
+    padding: 2rem 1rem;
   }
 }

@@ -66,17 +66,7 @@ const Login = ({ onClose }) => {
     setLoading(false);
   };
 
-  const demoCredentials = [
-    { role: 'Admin', email: 'admin@bcfsa.org', password: 'admin123' },
-    { role: 'Trainer', email: 'trainer@bcfsa.org', password: 'trainer123' },
-    { role: 'Student', email: 'student@bcfsa.org', password: 'student123' },
-    { role: 'Corp Member', email: 'corp@bcfsa.org', password: 'corp123' }
-  ];
 
-  const fillDemoCredentials = (email, password) => {
-    setFormData({ email, password });
-    setError('');
-  };
 
   if (showForgotPassword) {
     return (
@@ -170,23 +160,7 @@ const Login = ({ onClose }) => {
           </button>
         </form>
 
-        <div className="demo-credentials">
-          <h4>Demo Credentials:</h4>
-          <div className="demo-grid">
-            {demoCredentials.map((cred, index) => (
-              <div key={index} className="demo-card">
-                <h5>{cred.role}</h5>
-                <p>{cred.email}</p>
-                <button 
-                  onClick={() => fillDemoCredentials(cred.email, cred.password)}
-                  className="demo-fill-btn"
-                >
-                  Use These Credentials
-                </button>
-              </div>
-            ))}
-          </div>
-        </div>
+
       </div>
     </div>
   );

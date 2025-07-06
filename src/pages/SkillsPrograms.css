@@ -1,0 +1,395 @@
+/* Skills Programs Page Styles */
+.skills-programs-page {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+/* Hero Section */
+.skills-hero {
+  position: relative;
+  height: 60vh;
+  background: linear-gradient(135deg, #e67e22 0%, #d35400 100%);
+  display: flex;
+  align-items: center;
+  color: white;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(230, 126, 34, 0.8);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.skills-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 3rem;
+  opacity: 0.9;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.stat-item {
+  text-align: center;
+}
+
+.stat-item h3 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Programs Overview */
+.programs-overview {
+  padding: 80px 0;
+  background: white;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-header h2 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.section-header p {
+  font-size: 1.2rem;
+  color: #7f8c8d;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.program-card {
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.program-image {
+  position: relative;
+  height: 200px;
+  overflow: hidden;
+}
+
+.program-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.program-card:hover .program-image img {
+  transform: scale(1.05);
+}
+
+.program-overlay {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+
+.duration {
+  background: #e67e22;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.program-content {
+  padding: 2rem;
+}
+
+.program-content h3 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.program-content > p {
+  color: #7f8c8d;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.program-modules h4 {
+  color: #34495e;
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.program-modules ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.program-modules li {
+  color: #7f8c8d;
+  margin-bottom: 0.3rem;
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.program-modules li:before {
+  content: "✓";
+  color: #27ae60;
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+.program-stats {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat strong {
+  display: block;
+  color: #34495e;
+  font-size: 0.9rem;
+  margin-bottom: 0.3rem;
+}
+
+.stat span {
+  color: #e67e22;
+  font-weight: 600;
+}
+
+.program-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.program-actions .btn {
+  flex: 1;
+  text-align: center;
+  padding: 0.8rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background: #e67e22;
+  color: white;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: #d35400;
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #e67e22;
+  border: 2px solid #e67e22;
+}
+
+.btn-secondary:hover {
+  background: #e67e22;
+  color: white;
+}
+
+/* Why Choose BCFSA */
+.why-choose-bcfsa {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.why-choose-bcfsa h2 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  font-weight: 600;
+}
+
+.benefits-list {
+  margin-top: 2rem;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+}
+
+.benefit-item i {
+  color: #27ae60;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  margin-top: 0.3rem;
+}
+
+.benefit-item h4 {
+  color: #2c3e50;
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 600;
+}
+
+.benefit-item p {
+  color: #7f8c8d;
+  line-height: 1.6;
+}
+
+.benefits-image {
+  text-align: center;
+}
+
+.benefits-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Application Process */
+.application-process {
+  padding: 80px 0;
+  background: white;
+  text-align: center;
+}
+
+.application-process h2 {
+  color: #2c3e50;
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+  font-weight: 600;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.step {
+  padding: 2rem;
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: #e67e22;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 auto 1rem;
+}
+
+.step h3 {
+  color: #2c3e50;
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.step p {
+  color: #7f8c8d;
+  line-height: 1.6;
+}
+
+.cta-section {
+  margin-top: 3rem;
+}
+
+.btn-lg {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .skills-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-stats {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .programs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .program-actions {
+    flex-direction: column;
+  }
+
+  .process-steps {
+    grid-template-columns: 1fr;
+  }
+
+  .benefit-item {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .benefit-item i {
+    margin-bottom: 1rem;
+  }
+}

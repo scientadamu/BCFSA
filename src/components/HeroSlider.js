@@ -6,37 +6,58 @@ const HeroSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const slides = [
-    {
-      image: require('../assets/images/general/bago@bCFSA.jpg'),
-      title: 'Welcome to Bago Center For Skills Acquisition',
-      subtitle: 'Empowering Youth Through Free Basic Training',
-      description: 'Join us in building a skilled workforce for tomorrow'
-    },
-    {
-      image: require('../assets/images/general/image1.jpg'),
-      title: 'Quality Training Programs',
-      subtitle: 'Learn from Expert Trainers',
-      description: 'Comprehensive skill development in various fields'
-    },
-    {
-      image: require('../assets/images/general/image2.jpg'),
-      title: 'Modern Facilities',
-      subtitle: 'State-of-the-art Equipment',
-      description: 'Learn with the latest tools and technology'
-    },
-    {
-      image: require('../assets/images/general/image3.jpg'),
-      title: 'Career Opportunities',
-      subtitle: 'Build Your Future',
-      description: 'Graduate with marketable skills and job readiness'
-    },
-    {
-      image: require('../assets/images/general/image4.jpg'),
-      title: 'Community Impact',
-      subtitle: 'Making a Difference',
-      description: 'Contributing to community development through skills'
-    }
-  ];
+  {
+    image: require('../assets/images/general/farmrBago.jpg'),
+    title: 'His Excellency, Governor Farmer Umaru Bago',
+    subtitle: 'Visionary Leader & Patron of BCFSA',
+    description: 'Championing youth empowerment and skills development across Niger State',
+    category: 'leadership',
+    link: '/about#governor'
+  },
+  {
+    image: require('../assets/images/general/bcfsaChairman.jpg'),
+    title: 'Chairman of BCFSA',
+    subtitle: 'Leading Excellence in Skills Training',
+    description: 'Dedicated to transforming lives through quality education and training',
+    category: 'leadership',
+    link: '/about#chairman',
+    objectFit: 'cover',
+    objectPosition: 'center',
+  },
+  {
+    image: require('../assets/images/general/465A4630.jpg'),
+    title: 'Our Skills Acquisition Programs',
+    subtitle: 'Empowering Youth Through Quality Training',
+    description: 'Comprehensive vocational training in 8 different skills to build sustainable careers',
+    category: 'skills',
+    link: '/skills-programs'
+  },
+  {
+    image: require('../assets/images/general/ProposedOphanageHome.jpg'),
+    title: 'Our Orphanage Services',
+    subtitle: 'Caring for Vulnerable Children',
+    description: 'Providing love, care, education and hope for orphaned and vulnerable children',
+    category: 'orphanage',
+    link: '/orphanage-services'
+  },
+  {
+    image: require('../assets/images/general/genderBaseViolence.jpg'),
+    title: 'Fight Against Gender-Based Violence',
+    subtitle: 'Protecting Women & Children',
+    description: 'Advocacy, support services and empowerment programs to combat gender-based violence',
+    category: 'gbv',
+    link: '/fight-gbv'
+  },
+  {
+    image: require('../assets/images/general/marriage.jpg'),
+    title: 'Uniting Divorcees and Widows',
+    subtitle: 'Support • Empowerment • Community',
+    description: 'Providing emotional support, skills training and economic empowerment for women in need',
+    category: 'women-support',
+    link: '/women-support'
+  }
+];
+
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -75,8 +96,36 @@ const HeroSlider = () => {
               <h2>{slide.subtitle}</h2>
               <p>{slide.description}</p>
               <div className="slide-buttons">
-                <Link to="/programs" className="btn btn-primary">View Programs</Link>
-                <Link to="/registration" className="btn btn-secondary">Register Now</Link>
+                {slide.category === 'leadership' && (
+                  <>
+                    <Link to={slide.link} className="btn btn-primary">About Our Leadership</Link>
+                    <Link to="/contact" className="btn btn-secondary">Contact</Link>
+                  </>
+                )}
+                {slide.category === 'skills' && (
+                  <>
+                    <Link to={slide.link} className="btn btn-primary">View Programs</Link>
+                    <Link to="/application?type=trainee" className="btn btn-secondary">Register Now</Link>
+                  </>
+                )}
+                {slide.category === 'orphanage' && (
+                  <>
+                    <Link to={slide.link} className="btn btn-primary">Our Services</Link>
+                    <Link to="/contact" className="btn btn-secondary">Support Us</Link>
+                  </>
+                )}
+                {slide.category === 'gbv' && (
+                  <>
+                    <Link to={slide.link} className="btn btn-primary">Learn More</Link>
+                    <Link to="/contact" className="btn btn-secondary">Get Help</Link>
+                  </>
+                )}
+                {slide.category === 'women-support' && (
+                  <>
+                    <Link to={slide.link} className="btn btn-primary">Join Our Community</Link>
+                    <Link to="/application?type=trainee" className="btn btn-secondary">Apply for Training</Link>
+                  </>
+                )}
               </div>
             </div>
           </div>

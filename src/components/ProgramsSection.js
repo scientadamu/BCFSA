@@ -84,7 +84,7 @@ const ProgramsSection = () => {
               <div className="program-image">
                 <img src={program.image} alt={program.title} />
                 <div className="program-overlay">
-                  <Link to="/registration" className="btn btn-primary">Register Now</Link>
+                  <Link to="/application?type=trainee" className="btn btn-primary">Register Now</Link>
                 </div>
               </div>
               <div className="program-content">

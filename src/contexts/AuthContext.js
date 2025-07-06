@@ -1,4 +1,5 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
+import apiService from '../services/api';
 
 const AuthContext = createContext();
 
@@ -14,46 +15,6 @@ export const AuthProvider = ({ children }) => {
   const [user, setUser] = useState(null);
   const [loading, setLoading] = useState(true);
 
-  // Mock user data for demonstration
-  const mockUsers = {
-    'admin@bcfsa.org': {
-      id: 1,
-      email: 'admin@bcfsa.org',
-      password: 'admin123',
-      role: 'admin',
-      name: 'System Administrator',
-      avatar: '/api/placeholder/40/40',
-      permissions: ['all']
-    },
-    'trainer@bcfsa.org': {
-      id: 2,
-      email: 'trainer@bcfsa.org',
-      password: 'trainer123',
-      role: 'trainer',
-      name: 'John Trainer',
-      avatar: '/api/placeholder/40/40',
-      permissions: ['view_students', 'create_assessments', 'view_reports']
-    },
-    'student@bcfsa.org': {
-      id: 3,
-      email: 'student@bcfsa.org',
-      password: 'student123',
-      role: 'trainee',
-      name: 'Jane Student',
-      avatar: '/api/placeholder/40/40',
-      permissions: ['view_profile', 'submit_reports', 'view_assessments']
-    },
-    'corp@bcfsa.org': {
-      id: 4,
-      email: 'corp@bcfsa.org',
-      password: 'corp123',
-      role: 'corp_member',
-      name: 'NYSC Corp Member',
-      avatar: '/api/placeholder/40/40',
-      permissions: ['view_profile', 'print_clearance']
-    }
-  };
-
   useEffect(() => {
     // Check for stored user session
     const storedUser = localStorage.getItem('bcfsa_user');
@@ -65,12 +26,18 @@ export const AuthProvider = ({ children }) => {
 
   const login = async (email, password) => {
     try {
-      // Mock authentication
-      const foundUser = mockUsers[email];
-      if (foundUser && foundUser.password === password) {
-        const { password: _, ...userWithoutPassword } = foundUser;
+      // Use real API for authentication
+      const response = await apiService.login(email, password);
+
+      if (response.success) {
+        const userWithoutPassword = response.user;
         setUser(userWithoutPassword);
         localStorage.setItem('bcfsa_user', JSON.stringify(userWithoutPassword));
+
+        // Store auth token if provided
+        if (response.token) {
+          localStorage.setItem('authToken', response.token);
+        }
 
         // Determine dashboard route based on user role
         let dashboardRoute = '/';
@@ -93,62 +60,92 @@ export const AuthProvider = ({ children }) => {
 
         return { success: true, user: userWithoutPassword, redirectTo: dashboardRoute };
       } else {
-        return { success: false, error: 'Invalid email or password' };
+        return { success: false, error: response.message || 'Invalid email or password' };
       }
     } catch (error) {
-      return { success: false, error: 'Login failed. Please try again.' };
+      console.error('Login error:', error);
+      return { success: false, error: error.message || 'Login failed. Please try again.' };
     }
   };
 
   const logout = () => {
     setUser(null);
     localStorage.removeItem('bcfsa_user');
+    localStorage.removeItem('authToken');
   };
 
   const updateProfile = async (profileData) => {
     try {
-      // Mock profile update
-      const updatedUser = { ...user, ...profileData };
-      setUser(updatedUser);
-      localStorage.setItem('bcfsa_user', JSON.stringify(updatedUser));
-      return { success: true };
+      // Use real API for profile update
+      const response = await apiService.updateProfile(profileData);
+
+      if (response.success) {
+        const updatedUser = { ...user, ...response.user };
+        setUser(updatedUser);
+        localStorage.setItem('bcfsa_user', JSON.stringify(updatedUser));
+        return { success: true };
+      } else {
+        return { success: false, error: response.message || 'Failed to update profile' };
+      }
     } catch (error) {
-      return { success: false, error: 'Failed to update profile' };
+      console.error('Profile update error:', error);
+      return { success: false, error: error.message || 'Failed to update profile' };
     }
   };
 
   const changePassword = async (currentPassword, newPassword) => {
     try {
-      // Mock password change
-      const foundUser = mockUsers[user.email];
-      if (foundUser && foundUser.password === currentPassword) {
-        // In a real app, you'd update the password in the backend
-        return { success: true };
+      // Use real API for password change
+      const response = await apiService.changePassword(currentPassword, newPassword);
+
+      if (response.success) {
+        return { success: true, message: 'Password changed successfully' };
       } else {
-        return { success: false, error: 'Current password is incorrect' };
+        return { success: false, error: response.message || 'Failed to change password' };
       }
     } catch (error) {
-      return { success: false, error: 'Failed to change password' };
+      console.error('Password change error:', error);
+      return { success: false, error: error.message || 'Failed to change password' };
     }
   };
 
   const forgotPassword = async (email) => {
     try {
-      // Mock forgot password
-      if (mockUsers[email]) {
-        // In a real app, you'd send a reset email
-        return { success: true, message: 'Password reset instructions sent to your email' };
+      // Use real API for forgot password
+      const response = await apiService.forgotPassword(email);
+
+      if (response.success) {
+        return { success: true, message: response.message || 'Password reset instructions sent to your email' };
       } else {
-        return { success: false, error: 'Email not found' };
+        return { success: false, error: response.message || 'Email not found' };
       }
     } catch (error) {
-      return { success: false, error: 'Failed to process request' };
+      console.error('Forgot password error:', error);
+      return { success: false, error: error.message || 'Failed to process request' };
     }
   };
 
   const hasPermission = (permission) => {
     if (!user) return false;
-    return user.permissions.includes('all') || user.permissions.includes(permission);
+
+    // Admin users have all permissions
+    if (user.role === 'admin') return true;
+
+    // Check if user has specific permissions array
+    if (user.permissions) {
+      return user.permissions.includes('all') || user.permissions.includes(permission);
+    }
+
+    // Default role-based permissions
+    const rolePermissions = {
+      admin: ['all'],
+      trainer: ['view_students', 'manage_courses', 'view_reports'],
+      trainee: ['view_profile', 'view_courses', 'submit_assignments'],
+      corp_member: ['view_profile', 'print_clearance', 'view_courses']
+    };
+
+    const userPermissions = rolePermissions[user.role] || [];
+    return userPermissions.includes('all') || userPermissions.includes(permission);
   };
 
   const value = {

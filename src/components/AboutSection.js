@@ -23,7 +23,7 @@ const AboutSection = () => {
             </p>
             <div className="about-stats">
               <div className="stat">
-                <h3>500+</h3>
+                <h3>300+</h3>
                 <p>Graduates</p>
               </div>
               <div className="stat">

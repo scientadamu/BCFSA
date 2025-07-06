@@ -20,7 +20,7 @@
   width: 100%;
   height: 100%;
   background-size: cover;
-  background-position: center;
+  background-position: top; /* Show image from top */
   background-repeat: no-repeat;
   opacity: 0;
   transition: opacity 1s ease-in-out;
@@ -168,6 +168,9 @@
 .dot:hover {
   background: rgba(255, 255, 255, 0.8);
 }
+
+/* Only apply if you're using <img src=...> instead of background-image */
+
 
 /* Mobile Styles */
 @media (max-width: 768px) {
