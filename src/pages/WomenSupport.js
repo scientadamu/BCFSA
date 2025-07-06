@@ -226,54 +226,54 @@ const WomenSupport = () => {
 
           <div className="approach-timeline">
             <div className="timeline-item">
-              <div className="timeline-icon">🤝</div>
+              <div className="timeline-icon">📝</div>
               <div className="timeline-content">
-                <h3>Initial Support & Assessment</h3>
-                <p>Immediate emotional support and comprehensive needs assessment to understand each woman's unique situation and challenges.</p>
+                <h3>Registration & Profile Creation</h3>
+                <p>Comprehensive registration process with detailed profile creation to understand preferences, values, and relationship goals.</p>
                 <ul>
-                  <li>Crisis counseling and emotional support</li>
-                  <li>Needs assessment and goal setting</li>
-                  <li>Legal rights education</li>
-                  <li>Emergency assistance if needed</li>
+                  <li>Personal background assessment</li>
+                  <li>Relationship preferences and goals</li>
+                  <li>Values and lifestyle compatibility</li>
+                  <li>Background verification process</li>
                 </ul>
               </div>
             </div>
             <div className="timeline-item">
-              <div className="timeline-icon">💪</div>
+              <div className="timeline-icon">🔍</div>
               <div className="timeline-content">
-                <h3>Healing & Rebuilding</h3>
-                <p>Focused on emotional healing, building self-confidence, and developing new life skills for independence.</p>
+                <h3>Professional Matching</h3>
+                <p>Expert matchmakers use advanced compatibility assessment to identify potential partners who share similar values and life goals.</p>
                 <ul>
-                  <li>Individual and group therapy sessions</li>
-                  <li>Self-esteem and confidence building</li>
-                  <li>Peer support groups</li>
-                  <li>Life skills training</li>
+                  <li>Compatibility analysis and assessment</li>
+                  <li>Personality and lifestyle matching</li>
+                  <li>Family background consideration</li>
+                  <li>Professional and educational compatibility</li>
                 </ul>
               </div>
             </div>
             <div className="timeline-item">
-              <div className="timeline-icon">🎓</div>
+              <div className="timeline-icon">💬</div>
               <div className="timeline-content">
-                <h3>Skills Development</h3>
-                <p>Comprehensive vocational training and education to develop marketable skills for economic independence.</p>
+                <h3>Guided Introductions</h3>
+                <p>Facilitated introductions and meetings in comfortable, safe environments with ongoing support and guidance.</p>
                 <ul>
-                  <li>Vocational skills training</li>
-                  <li>Digital literacy programs</li>
-                  <li>Business and entrepreneurship training</li>
-                  <li>Financial literacy education</li>
+                  <li>Structured introduction meetings</li>
+                  <li>Chaperoned initial interactions</li>
+                  <li>Communication guidance and support</li>
+                  <li>Relationship development coaching</li>
                 </ul>
               </div>
             </div>
             <div className="timeline-item">
-              <div className="timeline-icon">🚀</div>
+              <div className="timeline-icon">💍</div>
               <div className="timeline-content">
-                <h3>Economic Empowerment</h3>
-                <p>Supporting women to achieve financial independence through business development and employment opportunities.</p>
+                <h3>Marriage Preparation</h3>
+                <p>Comprehensive pre-marriage counseling and preparation to ensure strong foundation for successful marriages.</p>
                 <ul>
-                  <li>Microfinance and loan programs</li>
-                  <li>Business mentorship and support</li>
-                  <li>Job placement assistance</li>
-                  <li>Ongoing business coaching</li>
+                  <li>Pre-marriage counseling sessions</li>
+                  <li>Family integration support</li>
+                  <li>Communication and conflict resolution</li>
+                  <li>Wedding planning assistance</li>
                 </ul>
               </div>
             </div>
