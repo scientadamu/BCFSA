@@ -243,17 +243,8 @@ const Programs = () => {
                 </div>
 
                 <div className="program-actions">
-                  {program.category === 'social-services' ? (
-                    <>
-                      <Link to={program.link} className="btn btn-primary">Learn More</Link>
-                      <Link to="/contact" className="btn btn-secondary">Get Support</Link>
-                    </>
-                  ) : (
-                    <>
-                      <Link to="/application?type=trainee" className="btn btn-primary">Register Now</Link>
-                      <Link to="/contact" className="btn btn-secondary">Learn More</Link>
-                    </>
-                  )}
+                  <Link to="/application?type=trainee" className="btn btn-primary">Register Now</Link>
+                  <Link to="/contact" className="btn btn-secondary">Learn More</Link>
                 </div>
               </div>
             </div>

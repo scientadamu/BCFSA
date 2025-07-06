@@ -124,6 +124,41 @@ const Header = () => {
                 Programs
               </Link>
             </li>
+            <li className="nav-dropdown">
+              <span className="nav-dropdown-toggle">
+                Services
+                <i className="fas fa-chevron-down"></i>
+              </span>
+              <ul className="nav-dropdown-menu">
+                <li>
+                  <Link
+                    to="/gender-violence-services"
+                    onClick={handleLinkClick}
+                    className={isActive('/gender-violence-services') ? 'active' : ''}
+                  >
+                    Gender Violence Support
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/women-support"
+                    onClick={handleLinkClick}
+                    className={isActive('/women-support') ? 'active' : ''}
+                  >
+                    Women Support
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/orphanage-services"
+                    onClick={handleLinkClick}
+                    className={isActive('/orphanage-services') ? 'active' : ''}
+                  >
+                    Orphanage Services
+                  </Link>
+                </li>
+              </ul>
+            </li>
             <li>
               <Link
                 to="/projects"
