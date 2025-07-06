@@ -6,75 +6,75 @@ const WomenSupport = () => {
   const services = [
     {
       icon: 'fas fa-heart',
-      title: 'Emotional Support',
-      description: 'Counseling and peer support groups for healing and emotional wellbeing'
-    },
-    {
-      icon: 'fas fa-graduation-cap',
-      title: 'Skills Training',
-      description: 'Vocational training programs to develop marketable skills and independence'
-    },
-    {
-      icon: 'fas fa-dollar-sign',
-      title: 'Economic Empowerment',
-      description: 'Microfinance, business training, and entrepreneurship support'
+      title: 'Professional Matchmaking',
+      description: 'Expert matchmaking services to connect divorcees and widows with compatible partners'
     },
     {
       icon: 'fas fa-users',
-      title: 'Community Building',
-      description: 'Creating supportive networks and communities for mutual support'
+      title: 'Partner Compatibility Assessment',
+      description: 'Comprehensive assessment to ensure compatibility and shared values between potential partners'
     },
     {
-      icon: 'fas fa-balance-scale',
-      title: 'Legal Support',
-      description: 'Legal advice and assistance for rights protection and advocacy'
+      icon: 'fas fa-comments',
+      title: 'Relationship Counseling',
+      description: 'Pre-marriage counseling and guidance to build strong, healthy relationships'
     },
     {
-      icon: 'fas fa-child',
-      title: 'Childcare Support',
-      description: 'Childcare services and parenting support for single mothers'
+      icon: 'fas fa-calendar-alt',
+      title: 'Social Events & Meetups',
+      description: 'Organized social gatherings and events for natural interaction and connection'
+    },
+    {
+      icon: 'fas fa-shield-alt',
+      title: 'Confidential & Safe Process',
+      description: 'Secure, confidential matchmaking process with thorough background verification'
+    },
+    {
+      icon: 'fas fa-hands-helping',
+      title: 'Ongoing Support',
+      description: 'Continuous support throughout the courtship and marriage preparation process'
     }
   ];
 
   const programs = [
     {
-      title: 'Widow Empowerment Program',
-      description: 'Comprehensive support for widows including counseling, skills training, and economic empowerment.',
+      title: 'Widow Matchmaking Program',
+      description: 'Specialized matchmaking services for widows ready to find love again, with emotional support and guidance throughout the process.',
       image: require('../assets/images/general/marriage.jpg'),
-      beneficiaries: '300+ widows supported',
-      duration: '6 months'
-    },
-    {
-      title: 'Divorcee Rehabilitation',
-      description: 'Helping divorced women rebuild their lives through education, training, and emotional support.',
-      image: require('../assets/images/general/465A4625.jpg'),
-      beneficiaries: '150+ women helped',
-      duration: '4 months'
-    },
-    {
-      title: 'Single Mother Support',
-      description: 'Specialized programs for single mothers including childcare, training, and financial assistance.',
-      image: require('../assets/images/general/465A4621.jpg'),
-      beneficiaries: '200+ mothers assisted',
+      beneficiaries: '300+ widows connected',
       duration: 'Ongoing'
+    },
+    {
+      title: 'Divorcee Partner Connection',
+      description: 'Professional matchmaking for divorced women, focusing on compatibility assessment and building healthy relationships.',
+      image: require('../assets/images/general/465A4625.jpg'),
+      beneficiaries: '150+ successful matches',
+      duration: 'Personalized'
+    },
+    {
+      title: 'Relationship Preparation Program',
+      description: 'Comprehensive preparation for remarriage including counseling, communication skills, and family integration support.',
+      image: require('../assets/images/general/465A4621.jpg'),
+      beneficiaries: '200+ couples prepared',
+      duration: '3-6 months'
     }
   ];
 
   const successStories = [
     {
       name: 'Fatima A.',
-      story: 'After losing my husband, I felt lost and hopeless. BCFSA helped me learn tailoring skills and start my own business. Now I can support my children and feel confident about our future.',
-      program: 'Widow Empowerment Program'
+      story: 'After losing my husband 3 years ago, I thought I would never find love again. BCFSA\'s matchmaking service connected me with a wonderful man who understands my journey. We\'re now happily married and building a beautiful blended family.',
+      program: 'Widow Matchmaking Program'
     },
     {
       name: 'Aisha M.',
-      story: 'The divorce left me with nothing. Through BCFSA\'s support, I learned computer skills and now work as a data entry clerk. I\'ve regained my independence and self-worth.',
-      program: 'Divorcee Rehabilitation'
+      story: 'Following my divorce, I was hesitant about relationships. The counselors at BCFSA helped me heal and guided me through their matchmaking process. I found my soulmate and we\'ve been married for 2 years now.',
+      program: 'Divorcee Partner Connection'
     },
     {
       name: 'Hauwa S.',
-      story: 'As a single mother, I struggled to provide for my children. The microfinance program helped me start a small business, and now my children can go to school.',
-      program: 'Single Mother Support'
+      story: 'The relationship preparation program was invaluable. It helped me and my partner understand each other better and prepare for blending our families. Our marriage is stronger because of the foundation BCFSA helped us build.',
+      program: 'Relationship Preparation Program'
     }
   ];
 
@@ -87,16 +87,16 @@ const WomenSupport = () => {
           <div className="container">
             <div className="row align-items-center">
               <div className="col-md-6">
-                <h1>Uniting Divorcees and Widows</h1>
-                <p className="hero-subtitle">Support • Empowerment • Community</p>
+                <h1>Finding Love Again: Divorcees & Widows Matchmaking</h1>
+                <p className="hero-subtitle">Connection • Compatibility • Companionship</p>
                 <p className="hero-description">
-                  BCFSA provides comprehensive support for divorced women and widows, helping them rebuild their 
-                  lives with dignity, independence, and hope. Through our programs, we create a supportive 
-                  community where women can heal, learn, and thrive.
+                  BCFSA provides professional matchmaking services specifically for divorced women and widows,
+                  helping them find compatible life partners. Our confidential and supportive approach ensures
+                  a safe environment for building meaningful relationships and finding love again.
                 </p>
                 <div className="hero-buttons">
-                  <Link to="/registration" className="btn btn-primary">Join Our Program</Link>
-                  <Link to="/contact" className="btn btn-secondary">Get Support</Link>
+                  <Link to="/registration" className="btn btn-primary">Start Your Journey</Link>
+                  <Link to="/contact" className="btn btn-secondary">Learn More</Link>
                 </div>
               </div>
               <div className="col-md-6">

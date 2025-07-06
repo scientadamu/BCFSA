@@ -23,18 +23,18 @@ const Services = () => {
     },
     {
       id: 'women-support',
-      title: 'Women Support & Empowerment',
-      description: 'Specialized support and empowerment programs for divorced women, widows, and vulnerable women in our community.',
+      title: 'Divorcees & Widows Matchmaking Support',
+      description: 'Specialized matchmaking and support services for divorced women and widows, helping them find compatible partners while providing comprehensive emotional and social support.',
       image: require('../assets/images/general/marriage.jpg'),
       features: [
+        'Professional Matchmaking Services',
+        'Partner Compatibility Assessment',
         'Emotional Support & Counseling',
-        'Skills Training & Development',
-        'Microfinance & Business Support',
-        'Community Building Activities',
-        'Legal Rights Education',
-        'Childcare Support Services'
+        'Pre-Marriage Guidance & Preparation',
+        'Community Events & Social Gatherings',
+        'Confidential Partner Introduction'
       ],
-      beneficiaries: '650+ Women Empowered',
+      beneficiaries: '650+ Women Connected',
       link: '/women-support',
       color: '#e91e63'
     },
