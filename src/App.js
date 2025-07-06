@@ -11,6 +11,7 @@ import Home from './pages/Home';
 import About from './pages/About';
 
 import Programs from './pages/Programs';
+import Services from './pages/Services';
 import SkillsPrograms from './pages/SkillsPrograms';
 import OrphanageServices from './pages/OrphanageServices';
 import FightGBV from './pages/FightGBV';
@@ -42,6 +43,7 @@ function App() {
               <Route path="/about" element={<About />} />
 
               <Route path="/programs" element={<Programs />} />
+              <Route path="/services" element={<Services />} />
               <Route path="/skills-programs" element={<SkillsPrograms />} />
               <Route path="/orphanage-services" element={<OrphanageServices />} />
               <Route path="/fight-gbv" element={<FightGBV />} />

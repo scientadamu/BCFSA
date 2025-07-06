@@ -1,0 +1,500 @@
+/* Services Page Styles */
+.services-page {
+  min-height: 100vh;
+  background-color: #f8f9fa;
+}
+
+/* Hero Section */
+.services-hero {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  color: white;
+  text-align: center;
+}
+
+.services-hero h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.2;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+  opacity: 0.9;
+}
+
+.hero-description {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Services Overview */
+.services-overview {
+  padding: 80px 0;
+  background: white;
+}
+
+.services-overview h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 3rem;
+  font-weight: 600;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 3rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  transition: all 0.3s ease;
+  border-top: 5px solid var(--service-color);
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+}
+
+.service-image {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+}
+
+.service-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.service-card:hover .service-image img {
+  transform: scale(1.05);
+}
+
+.service-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0,0,0,0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.service-card:hover .service-overlay {
+  opacity: 1;
+}
+
+.service-link {
+  color: white;
+  text-decoration: none;
+  padding: 12px 24px;
+  border: 2px solid white;
+  border-radius: 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.service-link:hover {
+  background: white;
+  color: #2c3e50;
+}
+
+.service-content {
+  padding: 2rem;
+}
+
+.service-content h3 {
+  color: #2c3e50;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.service-content p {
+  color: #666;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.service-features h4 {
+  color: var(--service-color);
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+.service-features ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 1.5rem;
+}
+
+.service-features ul li {
+  color: #555;
+  margin-bottom: 0.5rem;
+  padding-left: 1.5rem;
+  position: relative;
+}
+
+.service-features ul li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: var(--service-color);
+  font-weight: bold;
+}
+
+.service-impact {
+  margin-bottom: 1.5rem;
+}
+
+.impact-badge {
+  background: var(--service-color);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  display: inline-block;
+  font-size: 0.9rem;
+}
+
+.service-actions {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.service-actions .btn {
+  flex: 1;
+  min-width: 140px;
+  text-align: center;
+}
+
+/* Emergency Support */
+.emergency-support {
+  padding: 60px 0;
+  background: linear-gradient(135deg, #e74c3c, #c0392b);
+  color: white;
+  text-align: center;
+}
+
+.emergency-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.emergency-content p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.emergency-contacts {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.emergency-item h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.emergency-number {
+  color: white;
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 700;
+  padding: 10px 20px;
+  border: 2px solid white;
+  border-radius: 25px;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.emergency-number:hover {
+  background: white;
+  color: #e74c3c;
+}
+
+/* How We Help */
+.how-we-help {
+  padding: 80px 0;
+  background: #f8f9fa;
+}
+
+.how-we-help h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 3rem;
+}
+
+.help-process {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.process-step {
+  background: white;
+  padding: 2rem;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease;
+}
+
+.process-step:hover {
+  transform: translateY(-5px);
+}
+
+.step-number {
+  width: 60px;
+  height: 60px;
+  background: #2c3e50;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0 auto 1rem;
+}
+
+.process-step h3 {
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.process-step p {
+  color: #666;
+  line-height: 1.6;
+}
+
+/* Services Impact */
+.services-impact {
+  padding: 80px 0;
+  background: linear-gradient(135deg, #2c3e50, #34495e);
+  color: white;
+  text-align: center;
+}
+
+.services-impact h2 {
+  font-size: 2.5rem;
+  margin-bottom: 3rem;
+}
+
+.impact-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.stat-item {
+  padding: 2rem;
+}
+
+.stat-number {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: #ffd700;
+}
+
+.stat-label {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Call to Action */
+.services-cta {
+  padding: 80px 0;
+  background: white;
+  text-align: center;
+}
+
+.services-cta h2 {
+  font-size: 2.5rem;
+  color: #2c3e50;
+  margin-bottom: 1rem;
+}
+
+.services-cta p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 2rem;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Button Styles */
+.btn {
+  padding: 0.8rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-primary {
+  background: #2c3e50;
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #34495e;
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #2c3e50;
+  border: 2px solid #2c3e50;
+}
+
+.btn-secondary:hover {
+  background: #2c3e50;
+  color: white;
+}
+
+.btn-lg {
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+  }
+
+  .emergency-contacts {
+    gap: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .services-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+    padding: 0 15px;
+  }
+
+  .service-card {
+    margin-bottom: 2rem;
+  }
+
+  .service-actions {
+    flex-direction: column;
+  }
+
+  .service-actions .btn {
+    width: 100%;
+  }
+
+  .emergency-contacts {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .help-process {
+    grid-template-columns: 1fr;
+    padding: 0 15px;
+  }
+
+  .impact-stats {
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0 15px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .btn {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+@media (max-width: 480px) {
+  .services-hero h1 {
+    font-size: 2rem;
+  }
+
+  .services-hero {
+    padding: 60px 0;
+  }
+
+  .services-overview,
+  .how-we-help,
+  .services-impact,
+  .services-cta {
+    padding: 60px 0;
+  }
+
+  .emergency-support {
+    padding: 50px 0;
+  }
+
+  .service-content {
+    padding: 1.5rem;
+  }
+
+  .impact-stats {
+    grid-template-columns: 1fr;
+  }
+
+  .emergency-number {
+    font-size: 1.1rem;
+    padding: 8px 16px;
+  }
+}

@@ -125,10 +125,14 @@ const Header = () => {
               </Link>
             </li>
             <li className="nav-dropdown">
-              <span className="nav-dropdown-toggle">
+              <Link
+                to="/services"
+                onClick={handleLinkClick}
+                className={isActive('/services') ? 'active nav-dropdown-toggle' : 'nav-dropdown-toggle'}
+              >
                 Services
                 <i className="fas fa-chevron-down"></i>
-              </span>
+              </Link>
               <ul className="nav-dropdown-menu">
                 <li>
                   <Link
